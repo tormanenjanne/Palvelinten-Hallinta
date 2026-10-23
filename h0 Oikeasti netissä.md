@@ -40,7 +40,7 @@ Debian asennukseen käytin Teron ohjeistuksia (lähde: https://terokarvinen.com/
 
 Asennuksen jälkeen oli tarkoitus vielä komennolla terminaalissa `sudo apt-get update`, joka pävittää paketit ja tämän jälkeen `sudo apt-get -y dist-upgrade`.
 
-En ole vielä uskaltanut laittaa palomuuria päälle --> koska seuraavalla kerralla koneeni ei enään käynnistynt, kun kirjauduin sisään. Teen tämän varmaan myöhemmässä vaiheessa uudelleen.
+En ole vielä uskaltanut laittaa palomuuria päälle --> koska edellisellä kerralla koneeni ei enään käynnistynt, kun kirjauduin sisään. Teen tämän varmaan myöhemmässä vaiheessa uudelleen.
 
 
 
