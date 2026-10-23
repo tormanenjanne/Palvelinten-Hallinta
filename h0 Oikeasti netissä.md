@@ -1,7 +1,7 @@
 # h0 Oikeasti netissä.md
 Tehtävän tarkoituksena on asentaa Debian virtuaalikoneeseen, VPS, tulimuuri, ssh sekä web-palvelin. Myös muutamaan kirjalliseen tehtävään pitää vastata.
 
-## H4 Tehtävät (Kirjallinen vastaus)
+## H4 Tehtävät (Kirjallinen tehtävä)
 
 - Tässä tehtävässä annetaan step-by-step ohjeet, miten saat luotua itsellesi virtuaalipalvelimen UpCloudiin.
 - Vaikka ohjeet ovat suoraviivaiset, on hyvä pysähtyä miettimään, miten saat ssh-key luotua sekä kumpi ssh-avaimista on hyvä liittää UpCloud sivulle. (SSH-keygen on julkinen avain, joka liitetää sivustolle. Yksityinen avain jää käyttäjälle.)
@@ -9,12 +9,44 @@ Tehtävän tarkoituksena on asentaa Debian virtuaalikoneeseen, VPS, tulimuuri, s
 - Myös Web-palvelimen ohjeet ovat selkeät, sekä tässä raportissa on myös mainittu, miksi komennolla `sudo ufw allow 80/tcp` haluttiin avata http-liikenne, jotta se toimisi kaikilla käyttäjillä selaimessa.
 - Kokonaisuudessaan selkeä raportti, mutta jäin pohtimaan tuota http-liikenteen sallimista. Se ei välttämättä ole hyvä juttu, koska liikenne selväkielistä.
 
-## Harjoitus 5: Nimekäs kohta-a (Kirjallinen)
+## Harjoitus 5: Nimekäs kohta-a (Kirjallinen tehtävä)
 
 - Tässä käydään läpi, kuinka saadan julkinen domain nimi omalle palvelimelle. Palveluntarjoana käytettiin namecheappia 
 - Namecheap tarjoaa monia erilaisia vaihtoehto halvasta kalliimpaan vaihtoehtoon domain nimelle.
 - Itse olisin miettinyt, jos teen omalla nimellä domain nimen, olisinko laittanut vähän enemmän rahaa ja laittanut joko .com tai .fi päätteen.
 - Ohjeistukset ovat tässä selkeät, sekä lopussa myös mainitaan siitä, miten saadaan osoitettua @ sekä www suoraan omalle palvelimille. Hyvät ohjeet, jos haluaa omalle domainille nimen.
+
+## Virtuaalikoneen asentaminen sekä Debian käyttöjärjestelmä
+
+Tästä minulla ei ole valitettavasti kuvia, koska olin tehnyt jo tämän perjantaina ennen kuin tehtävänanto oltiin annettu, mutta käyn tämän kirjallisesti läpi.
+
+Ensimäisenä Virtuaaliboksiin laitoin virtuaalikoneen tiedot, jotka olivat:
+- 60gb virtuaalinen kovalevy
+- 4019mb muistia
+- 4 cpu
+
+Virtuaalikoneen annoin nimeksi palvelinten-hallinta-1, sekä laitoin cd-asemalle ISO-tiedoston, jossa oli Debian käyttöjärjestelmä. Lopputulokseksi sain luotua virtuualikoneen. Tässä ei itselläni tuottanut mitään ongelmia.
+
+<img width="603" height="657" alt="kuva" src="https://github.com/user-attachments/assets/6df8ba91-8b95-43d1-9595-ddd8cb7868f2" />
+
+Kuva 1. Koneen tiedot
+
+Debian asennukseen käytin Teron ohjeistuksia (lähde: https://terokarvinen.com/2021/install-debian-on-virtualbox/) Tässä vaiheittain miten tein itse tämän:
+- kieli oli Suomi.
+- Näppäimistön asetukset oli Finnish ja Default (Näin toimii ääkköset).
+- Sitten oli tarkoitus tyhjentää kovalevy (erase disk).
+- Lopuksi annoin nimeni (jannetormanen), käyttäjäni, jolla kirjaudun sisään (janne), tietokoneen nimi (palvelinten-hallinta-1) ja salanana.
+- Lopuksi oli yhteenveto, ja itse asennuksessa meni noin 20-30 minutttia.
+
+Asennuksen jälkeen oli tarkoitus vielä komennolla terminaalissa `sudo apt-get update`, joka pävittää paketit ja tämän jälkeen `sudo apt-get -y dist-upgrade`.
+
+En ole vielä uskaltanut laittaa palomuuria päälle --> koska seuraavalla kerralla koneeni ei enään käynnistynt, kun kirjauduin sisään. Teen tämän varmaan myöhemmässä vaiheessa uudelleen.
+
+
+
+
+
+
 
 ### lähteet
 
