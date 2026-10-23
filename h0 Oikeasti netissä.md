@@ -35,7 +35,7 @@ Debian asennukseen käytin Teron ohjeistuksia (lähde: https://terokarvinen.com/
 - kieli oli Suomi.
 - Näppäimistön asetukset oli Finnish ja Default (Näin toimii ääkköset).
 - Sitten oli tarkoitus tyhjentää kovalevy (erase disk).
-- Lopuksi annoin nimeni (jannetormanen), käyttäjäni, jolla kirjaudun sisään (janne), tietokoneen nimi (palvelinten-hallinta-1) ja salanana.
+- Lopuksi annoin nimeni (jannetormanen), käyttäjäni, jolla kirjaudun sisään (janne), tietokoneen nimi (palvelinten-hallinta-1) ja salasanan.
 - Lopuksi oli yhteenveto, ja itse asennuksessa meni noin 20-30 minutttia.
 
 Asennuksen jälkeen oli tarkoitus vielä komennolla terminaalissa `sudo apt-get update`, joka pävittää paketit ja tämän jälkeen `sudo apt-get -y dist-upgrade`, jolla asennettiin viimeisimmät versiot sovelluksista.
