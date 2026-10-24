@@ -110,6 +110,10 @@ Kirjauduin ssh:lla janne@iposoite minun virtuaalipalvelimelle ja päivitin paket
 
 <img width="891" height="786" alt="kuva" src="https://github.com/user-attachments/assets/f265596a-23d0-41dc-bad3-8297627bf9af" />
 
+## Yhteenveto
+
+Ajallisesti en osaa tarkkaan arvioida kauanko tässä meni, koska minulla oli aluksi haasteita virtuaalikoneen kanssa, mutta arvioisin, että noin yhteensä 8 tuntia meni. Hyödynsin tehtävässä onnistumisessa Karvisen, Heinosen sekä Niemen ohjeistuksia, jotta sain tehtävän onnistumaan.
+
 
 
 
