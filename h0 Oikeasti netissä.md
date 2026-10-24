@@ -104,22 +104,11 @@ Lopputulokseksi pääsin kirjautumaan janne käyttäjällä, tässä vielä kuva
 
 Seuraavana vielä lukitaan root-oikeudet komennolla `sudoedit /etc/ssh/sshd_config` ja muokkasin riviltä **PermitRootLogin yes** --> **PermitRootLogin no**, ja lopuksi vielä `sudo service ssh restart`
 
+## Web-palvelin Apache2 asennus
 
+Kirjauduin ssh:lla janne@iposoite minun virtuaalipalvelimelle ja päivitin paketit `sudo apt update` ja asensin Apache2 komennolla `sudo apt-get install apache2`. Vielä lopuksi pitää sallia http-portin pääsy komennolla `sudo ufw allow 80/tcp` ja `sudo ufw enable`. Lopputulokseksi sain Apachen sivun näkymään `http://oma ip-osoite`. Tässä vielä kuva:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<img width="891" height="786" alt="kuva" src="https://github.com/user-attachments/assets/f265596a-23d0-41dc-bad3-8297627bf9af" />
 
 
 
