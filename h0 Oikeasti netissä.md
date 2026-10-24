@@ -56,6 +56,31 @@ Seuraavan oli vuorossa valita, mitkä ovat palvelinkooneen spektit. Valitsin kai
 
 <img width="947" height="335" alt="kuva" src="https://github.com/user-attachments/assets/d0e72ab6-01c5-4c32-ac09-ee89f1b6b098" />
 
+Tämän jälkeen seuraavat kohta **Strorage** sekä **Automated Backups** jätettiin tyhjäksi.
+
+<img width="838" height="787" alt="kuva" src="https://github.com/user-attachments/assets/46f590c3-7a12-4a47-9548-e8769e72d151" />
+
+Käyttäjärjestelmäksi valittiin Debian 13 Trixie sekä **Network** kohdassa luotiin myös julkinen IPv4 ja IPv6-osoitteet, myös **Utility Network** kohtaan **yes**.
+
+<img width="608" height="914" alt="kuva" src="https://github.com/user-attachments/assets/30c19ca0-e8cc-47f4-b2d5-93b5c7c3cc41" />
+
+jatka vielä ssh...
+
+##  Alkutoimet. Tee virtuaalipalvelimellesi sudo-käyttäjä omalla nimellä (ei root). Asenna tulimuuri - ensin reikä ssh:lle. Päivitä kaikki ohjelmat ja boottaa tarvittaessa.
+
+Seuraavaksi kokeilin nyt uudestaan, sainko palomuurin toimimaan, ja pääsen kirjautumaan normaalisi virtuaalikoneelleni. Komentona käytin `sudo apt-get -y install ufw` ja tänän jälkeen
+`sudo ufw enable`
+
+<img width="491" height="61" alt="kuva" src="https://github.com/user-attachments/assets/2722a375-4028-4e73-a738-cebe7b63c7c1" />
+
+Nyt sain palomuurin toimimaan, ja se on aktiivisena. En tosiaan tiedä, mitä kävi silloin aikasemmin, kun asensin palomuurin ja virtuaalikoneeni ei mennyt eteenpäin kirjautumiskohdasta. Tässä vielä kuva jossa näkyy, että virtuaalikoneessani on palomuuri päällä. Komennollaa `sudo ufw status` näkyy, että palomuurin status on **enable**
+
+<img width="549" height="66" alt="kuva" src="https://github.com/user-attachments/assets/7ac0eafd-658f-417e-b8c7-c65ef459e94d" />
+
+
+
+
+
 
 
 
