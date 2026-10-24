@@ -116,6 +116,11 @@ Kirjauduin ssh:lla janne@iposoite minun virtuaalipalvelimelle ja päivitin paket
 ### lähteet
 
 Karvinen 2024. Install Debian on Virtualbox - Updated 2024. Luettavissa: https://terokarvinen.com/2021/install-debian-on-virtualbox/. Luettu: 23.10.2026.
+
 Heinonen 2025. VirtualBox Guest Additions. Luettavissa: https://hhmoodle.haaga-helia.fi/pluginfile.php/4751440/mod_resource/content/1/VirtualBox%20Guest%20Additions%20guide.pdf. Luettu: 23.10.2026.
+
 Niemi 2025. H4 Tehtävät. Luettavissa: https://github.com/AONCODES/linux-course/blob/main/h4.md. Luettu: 23.10.2026.
+
 Partanen 2025. Lokaalinen koneen tiedot. Luettavissa: https://partanennn.github.io/linux-servers/practices/fifth-week.html. Luettu: 23.10.2026
+
+Karvinen 2017 Luettavissa: https://terokarvinen.com/2017/first-steps-on-a-new-virtual-private-server-an-example-on-digitalocean/. Luettu: 24.10.2026
