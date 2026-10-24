@@ -94,9 +94,9 @@ Tein uuden virtuaalipalvelinkoneen, koska en saanut liitettyä vanhaa uutta ssh-
 
 <img width="722" height="154" alt="kuva" src="https://github.com/user-attachments/assets/19de7183-fa94-438f-a757-b85546e371bb" />
 
-Tämän jälkeen tein käyttäjän, joka ei ole root. syötin terminaalissa `adduser janne ` ja samalla sudo oikeudet `sudo adduser janne sudo`. Tämän jälkeen loin uuden kansion, johon liitän myöhemmin ssh avaimen `mkdir -p /home/janne/.ssh` ja sitten oikeudet `chmod 700 /home/aatu/.ssh`. Lopuksi nanossa lisätään julkinen avain yhdelle riville ` nano /home/janne/.ssh/authorized_keys`. (Tämä avain pitää kopioida .ssh kansiosta id_ed255519.pub)
+Tämän jälkeen tein käyttäjän, joka ei ole root. syötin terminaalissa `adduser janne ` ja samalla sudo oikeudet `sudo adduser janne sudo`. Tämän jälkeen loin uuden kansion, johon liitän myöhemmin ssh avaimen `mkdir -p /home/janne/.ssh` ja sitten oikeudet `chmod 700 /home/janne/.ssh`. Lopuksi nanossa lisätään julkinen avain yhdelle riville ` nano /home/janne/.ssh/authorized_keys`. (Tämä avain pitää kopioida .ssh kansiosta id_ed255519.pub)
 
-Viimeisenä asennetaan oikeudet komennolla: `chmod 600 /home/aatu1/.ssh/authorized_keys` ja omistajuus: `chown -R aatu:aatu /home/aatu/.ssh`.
+Viimeisenä asennetaan oikeudet komennolla: `chmod 600 /home/janne/.ssh/authorized_keys` ja omistajuus: `chown -R janne:janne /home/janne/.ssh`.
 
 Lopputulokseksi pääsin kirjautumaan janne käyttäjällä, tässä vielä kuva:
 
