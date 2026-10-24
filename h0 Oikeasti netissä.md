@@ -78,6 +78,44 @@ Nyt sain palomuurin toimimaan, ja se on aktiivisena. En tosiaan tiedä, mitä k�
 <img width="549" height="66" alt="kuva" src="https://github.com/user-attachments/assets/7ac0eafd-658f-417e-b8c7-c65ef459e94d" />
 
 
+Seuraavana oli tarkoitus asentaa omalle virtuaalikoneelleni ssh, jotta saan yhteyttä virtuaalipalvelimeeni. ssh-asennus tapahtui komennolla `sudo apt-get -y install ssh`, ja tämän jälkeen komennolla `sudo systemctl enable --now ssh` saadaan ssh päälle heti käynnistäessä. Tässä kuva vielä, jossa ssh on laitettu päälle käynnistyksen yhteydessä.
+
+<img width="722" height="79" alt="kuva" src="https://github.com/user-attachments/assets/6620b161-05b1-4a2b-b1b0-6c729ee03c75" />
+
+Testasin myös vielä, toimiiko ssh komennolla `ssh localhost` ja kirjautuminen onnistui! Kirjauduin vielä ulos ssh:sta komennolla `exit`.
+
+Tämän jälkeen loin SSH-avaimet, jotta pääsen kirjautumaan tällä virtuaalikoneella minun virtuaalipalvelimelleni. Komennolla `ssh-keygen` luodaan avainparit ja painamalla muutaman kerran entteriä, saadaan luotua julkinen sekä yksityinen avainpari. Näin ollaan saatu luotua avainparit meidän käyttäjälle.
+
+Seuraavaksi siirretään julkinen avainpari suoraan meidän virtuaalipalvelimelle, jotta pääsemme kirjautumaan sisään. komennolla ``cat ~/.ssh/id_ed25519.pub` saadaan näkyviin meidän ssh-julkinen avainpari ja liitetään se UpCloudiin. Tässä vielä kuva, kun se on liitettynä tuonne, mutta en uskaltanut näyttää sisältöä.
+
+<img width="662" height="344" alt="kuva" src="https://github.com/user-attachments/assets/3f32608e-652b-49d2-a33d-20dd8a683707" />
+
+Tein uuden virtuaalipalvelinkoneen, koska en saanut liitettyä vanhaa uutta ssh-avainta... jatketaan tästä eteenpäin. Ensiksi avataan portti ssh- yhteydelle ennenkuin laitamme palomuurin päälle. Ensimmäisenä asennetaan palomuuri komennolla `sudo apt-get update` ja sitten `sudo apt install ufw`. seuraavaksi sitten `sudo ufw allow 22/tcp` ja `sudo ufw enable`. Tällä varmistetaan, että ei ssh-yhteys ei kaadu.
+
+<img width="722" height="154" alt="kuva" src="https://github.com/user-attachments/assets/19de7183-fa94-438f-a757-b85546e371bb" />
+
+Tämän jälkeen tein käyttäjän, joka ei ole root. syötin terminaalissa `adduser janne ` ja samalla sudo oikeudet `sudo adduser janne sudo`. Tämän jälkeen loin uuden kansion, johon liitän myöhemmin ssh avaimen `mkdir -p /home/janne/.ssh` ja sitten oikeudet `chmod 700 /home/aatu/.ssh`. Lopuksi nanossa lisätään julkinen avain yhdelle riville ` nano /home/janne/.ssh/authorized_keys`. (Tämä avain pitää kopioida .ssh kansiosta id_ed255519.pub)
+
+Viimeisenä asennetaan oikeudet komennolla: `chmod 600 /home/aatu1/.ssh/authorized_keys` ja omistajuus: `chown -R aatu:aatu /home/aatu/.ssh`.
+
+Lopputulokseksi pääsin kirjautumaan janne käyttäjällä, tässä vielä kuva:
+
+<img width="696" height="190" alt="kuva" src="https://github.com/user-attachments/assets/72165704-1431-4b65-b58d-9b02b29e2e0b" />
+
+Seuraavana vielä lukitaan root-oikeudet komennolla `sudoedit /etc/ssh/sshd_config` ja muokkasin riviltä **PermitRootLogin yes** --> **PermitRootLogin no**, ja lopuksi vielä `sudo service ssh restart`
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
