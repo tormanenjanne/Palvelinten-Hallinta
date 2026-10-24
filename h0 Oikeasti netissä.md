@@ -44,6 +44,21 @@ Lopuksi vielä varmistin, että sain copy pasten toimimaan näiden ohjeistuksien
 
 En ole vielä uskaltanut laittaa palomuuria päälle --> koska edellisellä kerralla koneeni ei enään käynnistynt, kun kirjauduin sisään. Teen tämän varmaan myöhemmässä vaiheessa uudelleen.
 
+## VPS vuokrataa virtuaalinen yksityispalvelin
+
+Tämän vaiheen tein myös oppitunnilla luokan edessä opettajan avustuksella, joten otan screenshotteja sivustolla, miten tämä tehtäisiin. Palveluna valitisin suomalaisen UpCloudin.
+
+Ensimmäisessä vaiheessa valitaan, mistä maasta haluamme serverimme. Valitsin suomen.
+
+<img width="961" height="703" alt="kuva" src="https://github.com/user-attachments/assets/92c6c773-6a8e-4d7a-9138-6a9c8c727592" />
+
+Seuraavan oli vuorossa valita, mitkä ovat palvelinkooneen spektit. Valitsin kaikista halvimman vaihtoehdon (CPU Core: 1, Memory: 1GB, Storage: 10GB, Price 3.00€/kuukaudessa), koska opettaja mainitsi tunnilla, että tämä varmasti riittää meidän tarpeisiimme ainakin alkuun.
+
+<img width="947" height="335" alt="kuva" src="https://github.com/user-attachments/assets/d0e72ab6-01c5-4c32-ac09-ee89f1b6b098" />
+
+
+
+
 
 
 ### lähteet
