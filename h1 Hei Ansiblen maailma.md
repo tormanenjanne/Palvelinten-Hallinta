@@ -44,7 +44,7 @@ Seuraavaksi tehdään kansio, jossa on `janne` käyttäjä. Kansio luodaan `mkdi
 
 <img width="708" height="158" alt="kuva" src="https://github.com/user-attachments/assets/c7cdf51c-5e2b-499a-87cd-fbfd2ae88528" />
 
-`ansible all -a 'uptime' -i hosts.ini`(-a antaa avain=arvo muodossa, eli se antaa käskyn mitä suoritetaan tässä tapauksessa `uptime` kertoo kauanko järjestelmä on ollut päällä ja -i mihin tiedostoon tämä komento suoritetaan, jossa sijaitsee localhost kone). Lähde: `man ansible` ja `man uptime`.
+`ansible all -a 'uptime' -i hosts.ini`(-a antaa avain=arvo muodossa, eli se antaa käskyn mitä suoritetaan tässä tapauksessa. `uptime` kertoo kauanko järjestelmä on ollut päällä ja -i mihin tiedostoon tämä komento suoritetaan, jossa sijaitsee localhost kone). Lähde: `man ansible` ja `man uptime`.
 
 <img width="720" height="183" alt="kuva" src="https://github.com/user-attachments/assets/2d0ccc2c-928d-408d-8656-5c47573d0e8c" />
 
