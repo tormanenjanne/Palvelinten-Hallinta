@@ -73,28 +73,38 @@ Tämä siis kertoo, että komentoa -i ei tarvitse enään käyttää, koska se o
 
 <img width="605" height="65" alt="kuva" src="https://github.com/user-attachments/assets/ff506b31-df64-400e-ab1f-58c0ca7ef9f3" />
 
+### Site.yml
 
+Seuraaksi luomme roolit tietokoneille Microssa. Komennolla `micro site.yml`, luotiin tiedosto, johon lisäämme nämä tiedot:
 
+- Ensimmäinen rivi: hosts: all
+- Toinen rivi: roles:
+- kolmas rivi: - hello
 
+<img width="251" height="56" alt="kuva" src="https://github.com/user-attachments/assets/fbe396cd-ac8c-42b0-89b2-dbc998c48519" />
 
+kun suoritimme pelikirjan `ansible-playbook site.yml`, huomaamme virheen, jossa ilmoitetaan, että `hello` viestiä ei näy, koska sitä ei olla vielä luotu. site.yml tiedosto kuintenkin toimii, joka on hyvä juttu tässä vaiheessa.
 
+<img width="719" height="174" alt="kuva" src="https://github.com/user-attachments/assets/65c5a69a-d18e-4623-bbd4-bbfde70eb10e" />
 
+### Luodaan ensimmäiselle roolille tiedosto
 
+Luodaan kansio `mkdir -p roles/hello/tasks/`, ja tämän jälkeen Microssa `micro roles/hello/tasks/main.yml`.
 
+- Ensimmäinen rivi: - copy
+- Toinen rivi: dest: /tmp/hello-ansible
+- Kolmas rivi: content: "Hello world"
 
+<img width="339" height="68" alt="kuva" src="https://github.com/user-attachments/assets/8c1fd04d-2928-4927-a9fd-90711a91d37e" />
 
+Seuraavaksi ajetaan playbook komennolla `ansible-playbook site.yml`. Tässä huomaamme, että olen jo ajanut aikaisemmin tämän tiedoston, joten kohdassa `TASK [hello : copy]` ei ole `change: [localhost]` vaan `ok: [locahost]`
 
+<img width="715" height="234" alt="kuva" src="https://github.com/user-attachments/assets/0e82f9ce-b598-4f54-80cf-67f93bd0bb22" />
 
+Lopuksi huomaamme vielä, että komento toimii myös ssh:lla `ssh localhost 'cat /tmp/hello-ansible'
+`, ja se tulostaa `hello world`.
 
-
-
-
-
-
-
-
-
-
+<img width="623" height="38" alt="kuva" src="https://github.com/user-attachments/assets/25e14233-c269-4b1a-9600-37b0b3762061" />
 
 
 ## Lähteet
