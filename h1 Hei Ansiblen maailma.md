@@ -114,7 +114,8 @@ Tätä tehtävää tehdessä hyödynsin Karvinen 2026, Hello Ansible arkittelia 
 Käytin tähän 29.10 vajaan tunnin vastattuani kirjallisiin kysymyksiin, ja 30.10 käytin yhteensä varmaan noin neljä tuntia tehtävien tekemiseen sekä raportin työstämiseen. Kokonaisarvio on noin viisi tuntia. Osan tehtävistä olin jo tehnyt tunnilla tai aikaisemmin, joten viittasin edelliseen raporttiin, jos olin tehnyt nämä tehtävät muun muassa debianin asennus sekä ssh-avainparien luonti.
 
 ## Lähteet
-
+- Man Ansible 2026. Debianissa komennolla `man ansible`.
+- Man uptime 2026. Debianissa komennolla `man uptime`.
 - MAN 2026. Manual page server. Luettavissa: https://man.openbsd.org/ssh. Luettu: 29.10.2026.
 - MAN journal 2026. Linux manual page. Luettavissa: https://man7.org/linux/man-pages/man1/journalctl.1.html. Luettu: 19.10.2026.
 - Karvinen 2026. SSH public key - Login without password. Luettavissa: https://terokarvinen.com/ssh-public-key-login-without-password/. Luettu: 30.10.2026.
