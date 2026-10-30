@@ -7,7 +7,7 @@
 - Artikkelissa annetaan ohjeet, kuinka voidaan kirjautua ilman salasanaa ssh:n julkisella avaimella.
 - SSH asennuksen jälkeen, komennolla `sudo systemctl enable --now ssh` saadaan ssh saadaan käyttöön, sekä sen aloittaminen `--now ssh`.
 - Kopiointi localhostille onnistuu `ssh-copy-id localhost`, tämä siirtää julkisen avaimen `.ssh/authorized_keys` tiedostoon.
-- Myös muutamia vianmäärityskomentoja on asiakaspuolelle `ssh -v localhost`, joka tulostaa virheenkorjaus viestejä sekä palvelinpuolella `sudo journalctl --follow`, tämä taas tulostaa viimeisimmät lokitiedot. Viimeisenä `sudo systemctl status ssh`, joka näyttää, onko ssh missä tilassa tällä hetkellä.(Karvinen 2026)
+- Myös muutamia vianmäärityskomentoja on asiakaspuolelle `ssh -v localhost`, joka tulostaa virheenkorjaus viestejä sekä palvelinpuolella `sudo journalctl --follow`, tämä taas tulostaa viimeisimmät lokitiedot. Viimeisenä `sudo systemctl status ssh`, joka näyttää, onko ssh missä tilassa tällä hetkellä. (Man Journal 2026;Man ssh 2026;Karvinen 2026)
 - Mielestäni tämä on hyvä tapa kirjautua, koska ei tarvitse salasanaa syöttää ollenkaan.
 ### Ansible
 
