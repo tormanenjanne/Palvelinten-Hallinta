@@ -51,8 +51,8 @@ Seuraavaksi tehdään kansio, jossa on meidän käyttäjämme. Kansio luodaan `m
 ### Python virhe pois
 
 Jos haluamme python versiosta valittamisen pois muokkaamme Microssa `hosts.ini` tiedostoa näin:
-- lisäämme sinne toiselle riville: `[all:vars]`
-- kolmannelle riville: `ansible_python_interpreter=/usr/bin/python3`
+- lisäämme kolmannelle riville: `[all:vars]`
+- neljännelle riville: `ansible_python_interpreter=/usr/bin/python3`
 <img width="446" height="82" alt="kuva" src="https://github.com/user-attachments/assets/a28164f4-3c6c-42d0-8706-3ee819a5a828" />
 
 Seuraavaksi ajamme uudestaan komennon `ansible all -a 'uptime' -i hosts.ini`, ja Pythonin virheilmoitusta ei tule enään uudestaan.
