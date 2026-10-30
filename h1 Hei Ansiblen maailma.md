@@ -48,9 +48,32 @@ Seuraavaksi tehdään kansio, jossa on meidän käyttäjämme. Kansio luodaan `m
 
 <img width="720" height="183" alt="kuva" src="https://github.com/user-attachments/assets/2d0ccc2c-928d-408d-8656-5c47573d0e8c" />
 
-Jos haluamme python versiosta valittamisen pois muokkaamme `hosts.ini` tiedostoa näin:
+### Python virhe pois
+
+Jos haluamme python versiosta valittamisen pois muokkaamme Microssa `hosts.ini` tiedostoa näin:
 - lisäämme sinne toiselle riville: `[all:vars]`
 - kolmannelle riville: `ansible_python_interpreter=/usr/bin/python3`
+<img width="446" height="82" alt="kuva" src="https://github.com/user-attachments/assets/a28164f4-3c6c-42d0-8706-3ee819a5a828" />
+
+Seuraavaksi ajamme uudestaan komennon `ansible all -a 'uptime' -i hosts.ini`, ja Pythonin virheilmoitusta ei tule enään uudestaan.
+
+<img width="694" height="70" alt="kuva" src="https://github.com/user-attachments/assets/bc3401d5-ccc9-4b20-8c82-0b809cf93b6a" />
+
+### Pelkän hostin käyttäminen
+
+Luomme configure tiedosto Microssa `micro ansible.cfg`, ja lisäämme nämä:
+
+- Ensimmäiselle riville: [defaults]
+- Toiselle riville: inventory = hosts.ini
+
+Tämä siis kertoo, että komentoa -i ei tarvitse enään käyttää, koska se on nyt määritetty toiselle riville komennolla `inventory = hosts.ini`. Lopuksi testaamme, että tämä toimii ilman `-i` atribuuttia komennolla `ansible all -a "uptime"`.
+
+<img width="605" height="65" alt="kuva" src="https://github.com/user-attachments/assets/ff506b31-df64-400e-ab1f-58c0ca7ef9f3" />
+
+
+
+
+
 
 
 
