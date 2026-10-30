@@ -66,7 +66,8 @@ Luomme configure tiedosto Microssa `micro ansible.cfg`, ja lisäämme nämä:
 - Ensimmäiselle riville: [defaults]
 - Toiselle riville: inventory = hosts.ini
 
-<img width="630" height="56" alt="kuva" src="https://github.com/user-attachments/assets/f6d17a0a-12ba-43f8-997d-4e439b42e177" />
+<img width="302" height="54" alt="kuva" src="https://github.com/user-attachments/assets/06840b87-eb6b-4620-85ff-a624e9a32a9e" />
+
 
 Tämä siis kertoo, että komentoa -i ei tarvitse enään käyttää, koska se on nyt määritetty toiselle riville komennolla `inventory = hosts.ini`. Lopuksi testaamme, että tämä toimii ilman `-i` atribuuttia komennolla `ansible all -a "uptime"`.
 
