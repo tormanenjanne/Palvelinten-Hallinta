@@ -40,7 +40,7 @@ Julkisen avaimen kopiointi localhostille onnistuu komenolla `ssh-copy-id localho
 
 Ansible asennus tapahtuu komennolla `sudo apt-get install ansible micro bash-completion tree`, joka asentaa Ansiblen lisäkisi myös micro tekstieditorin, Bashin sekä tree, joka näyttää puumaisessa muodossa tiedostorakenteesi.
 
-Seuraavaksi tehdään kansio, jossa on `janne` käyttäjä. Kansio luodaan `mkdir ansible/` ja tämän jälkeen siirrytään kansioon `cd ansible/`. Tämän jälkeen micro tekstieditorissa luodaan ini-tiedosto, jonne lisäämme localhost käyttäjän komennolla `micro hosts.ini`. Lisäämällä localhostin varmistetaan, että se varmasti on siellä komennolla `cat hosts.ini`. Tässä kuvassa näemme kokonaisuudessaan, mitä tein äsken.
+Seuraavaksi tehdään kansio, jossa on `janne` käyttäjä. Kansio luodaan `mkdir ansible/` ja tämän jälkeen siirrytään kansioon `cd ansible/`. Tämän jälkeen micro tekstieditorissa luodaan ini-tiedosto, johon lisäämme localhost käyttäjän komennolla `micro hosts.ini`. Lisäämällä localhostin varmistetaan, että se varmasti on siellä komennolla `cat hosts.ini`. Tässä kuvassa näemme kokonaisuudessaan, mitä tein äsken.
 
 <img width="708" height="158" alt="kuva" src="https://github.com/user-attachments/assets/c7cdf51c-5e2b-499a-87cd-fbfd2ae88528" />
 
