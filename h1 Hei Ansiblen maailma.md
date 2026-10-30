@@ -106,8 +106,12 @@ Lopuksi huomaamme vielä, että komento toimii myös ssh:lla `ssh localhost 'cat
 
 <img width="623" height="38" alt="kuva" src="https://github.com/user-attachments/assets/25e14233-c269-4b1a-9600-37b0b3762061" />
 
+Tätä tehtävää tehdessä hyödynsin Karvinen 2026, Hello Ansible arkittelia mukautuen muutamia komentoja lopussa, jotta sain tulosteeksi `Hello world`.
+
 
 ## Lähteet
 
 - MAN 2026. Manual page server. Luettavissa: https://man.openbsd.org/ssh. Luettu: 29.10.2026.
-- MAN journal 2026. Linux manual page. Luettavissa: https://man7.org/linux/man-pages/man1/journalctl.1.html. Luettu: 19.10.2026. 
+- MAN journal 2026. Linux manual page. Luettavissa: https://man7.org/linux/man-pages/man1/journalctl.1.html. Luettu: 19.10.2026.
+- Karvinen 2026. SSH public key - Login without password. Luettavissa: https://terokarvinen.com/ssh-public-key-login-without-password/. Luettu: 30.10.2026.
+- Karvinen 2026. Hello Ansible. Luettavissa: https://terokarvinen.com/hello-ansible/. Luettu: 30.10.2026.
