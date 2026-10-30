@@ -109,6 +109,9 @@ Lopuksi huomaamme vielä, että komento toimii myös ssh:lla `ssh localhost 'cat
 
 Tätä tehtävää tehdessä hyödynsin Karvinen 2026, Hello Ansible arkittelia mukautuen muutamia komentoja lopussa, jotta sain tulosteeksi `Hello world`.
 
+## Ajankäyttö
+
+Käytin tähän 29.10 vajaan tunnin vastattuani kirjallisiin kysymyksiin, ja 30.10 käytin yhteensä varmaan noin neljä tuntia tehtävien tekemiseen sekä raportin työstämiseen. Kokonaisarvio on noin viisi tuntia. Osan tehtävistä olin jo tehnyt tunnilla tai aikaisemmin, joten viittasin edelliseen raporttiin, jos olin tehnyt nämä tehtävät muun muassa debianin asennus sekä ssh-avainparien luonti.
 
 ## Lähteet
 
