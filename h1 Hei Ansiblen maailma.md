@@ -7,13 +7,13 @@
 - Artikkelissa annetaan ohjeet, kuinka voidaan kirjautua ilman salasanaa ssh:n julkisella avaimella.
 - SSH asennuksen jälkeen, komennolla `sudo systemctl enable --now ssh` saadaan ssh saadaan käyttöön, sekä sen aloittaminen `--now ssh`.
 - Kopiointi localhostille onnistuu `ssh-copy-id localhost`, tämä siirtää julkisen avaimen `.ssh/authorized_keys` tiedostoon.
-- Myös muutamia vianmäärityskomentoja on asiakaspuolelle `ssh -v localhost`, joka tulostaa virheenkorjaus viestejä sekä palvelinpuolella `sudo journalctl --follow`, tämä taas tulostaa viimeisimmät lokitiedot. Viimeisenä `sudo systemctl status ssh`, joka näyttää, onko ssh missä tilassa tällä hetkellä.  
+- Myös muutamia vianmäärityskomentoja on asiakaspuolelle `ssh -v localhost`, joka tulostaa virheenkorjaus viestejä sekä palvelinpuolella `sudo journalctl --follow`, tämä taas tulostaa viimeisimmät lokitiedot. Viimeisenä `sudo systemctl status ssh`, joka näyttää, onko ssh missä tilassa tällä hetkellä.(Karvinen 2026)  
 
 ### Ansible
 
 - Ansiblella kirjotat Infrastruktuuria koodina, ja se tekee muutoksia orjatietokoneille. Ansible toimii ssh:n kautta.
 - Ansiblelle pitää lisätä host koneita, joita halutaan hallita. Tämä tapahtuu komennolla: `micro hosts.ini` (tässä Micro on tekstieditori ja hosts.ini on host kone)
-- `site.yml` määrittelee, mitä rooleja ja asetuksia käyttäjät saavat.
+- `site.yml` määrittelee, mitä rooleja ja asetuksia käyttäjät saavat. (Karvinen 2026)
 
 ## a) Paikallista. Asenna Debian 13 paikallisesti virtuaalikoneeseen.
 
