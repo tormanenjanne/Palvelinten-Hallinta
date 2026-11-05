@@ -74,6 +74,12 @@ Lisätään tai poistetaan ssh-avain käyttäjältä
 
 
 ## Lähteet
+- Ansible doc-copy. Luettu: 5.11.2026
+- Ansible-doc apt. Luettu: 5.11.2026
+- Ansible-doc file. Luettu: 5.11.2026
+- Ansible-doc user. Luettu: 5.11.2026
+- Ansible-doc authorized_key. Luettu: 5.11.2026
 - Karvinen 2026. Sudo without password. Luettavissa: https://terokarvinen.com/passwordless-sudo/. Luettu: 5.11.2026.
+- Karvinen 2026. Passwordless Sudo with Ansible. Luettavissa: https://terokarvinen.com/passwordless-sudo-with-ansible/#. Luettu: 5.11.2026.
 - Munroe 2026. Sandwitch. Luettavissa: https://xkcd.com/149/. Luettu: 5.11.2026.
 - 
