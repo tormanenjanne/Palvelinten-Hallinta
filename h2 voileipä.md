@@ -14,6 +14,10 @@
 - Tässä nähdään sudon vahvuus, eli root-oikeuksilla saadaan asiat tapahtumaan olisi tilanne mikä tahansa.
 
 ### Passwordless Sudo with Ansible
+- Suositus on luoda ensimmäisenä manuaalisesti käyttäjä ennen automatisointia sekä ansible pitää toimia.
+- `tree` komennolla voidaan nähdä hakemistorakenne ja selvittää, mitä tiedostoa haluamme muuttaa. Tässä tapauksessa `main.yml`, joka on uuden käyttäjän asetukset sekä määritykset.
+- Ensimmäisellä ajolla ei ole sudo ilman salasanaa, joten `become: true` pitää lisätä site.yml lohkoon. Lopuksi ajetaan playbook ja sudo komento annetaan lisäyksellä -K.
+
 
 ### Ansible doc-copy
 - ansible doc-copy: Kopioi tiedoston/hakemiston paikalliselta/etäkoneelta haluamallesi etäkoneelle.
