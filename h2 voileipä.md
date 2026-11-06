@@ -122,10 +122,20 @@ Seuraavaksi luodaan main.yml tiedosto komennolla, jonka jälkeen luodaaan koodin
 micro roles/uusikayttaja/tasks/main.yml
 ```
 
-
-
-
 <img width="891" height="759" alt="kuva" src="https://github.com/user-attachments/assets/21dc2e10-ffbc-4a91-ba66-a2b0f759f799" />
+
+- Group: nimi sekä ryhmä tila. tällä hetkellä present eli se pitää luoda, jos tätä ei ole olemassa
+- User: nimi, tila (suorittaa saman toiminnon mitä ryhmässä), ryhmät mihin ryhmiin käyttäjä lisätään
+- authorized_key: käyttäjänimi sekä julkinenavain siirretään tänne
+- copy: kopioidaan tiedot, mihin ollaan aikaisemmin luotu salasanaton komento, ja content kohtaa tämä kyseinen komento. Seuraavaksi määritellään oikeudet tässä tapauksessa omistajalle sekä ryhmälle.
+
+Julkisenavaimen tiedot kävin hakemassa ssh kansiosta, ja tiedoston lopussa pitää olla .pub, jotta tiedetään, että kyseessä on julkinen avain. Tämän avasin komennolla `cat ja/tiedostonimi.pub`. Lopuksi siirsin copy pastella julkisen avaimen uusikayttajan main.yml tiedostolle.
+
+Lopuksi vielä lisäsin `uusikayttaja` hosts.ini tiedostoon ja vielä Teron ohjeistuksien mukaan lisäsin site.yml tiedostoon vielä `become:true` ja roles `- uusikayttaja`
+
+<img width="365" height="147" alt="kuva" src="https://github.com/user-attachments/assets/34c34ac8-169b-4127-b0ff-30fe1319aa35" />
+
+
 
 
 
