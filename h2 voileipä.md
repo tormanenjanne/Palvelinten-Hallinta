@@ -147,7 +147,7 @@ playbook ajo näyttää, että .
 
 # c) package. asenna pari pakettia.
 
-Lähdin asentamaan Googlauksen jälkeen pari kevyttä ohjelmaa htop ja dfc. Htop on komentoriviohjelma, jolla voidaan tarkkailla ja hallita prosesseja. (linux.fi), ja dfc ohjelma, joka näyttää levytilaa värikoodeilla. (emms 2024).
+Lähdin asentamaan Googlauksen jälkeen pari kevyttä ohjelmaa htop ja ncdu. Htop on komentoriviohjelma, jolla voidaan tarkkailla ja hallita prosesseja. (linux.fi), ja ncdu ohjelman, joka näyttää miten käytän levytilaanin linuxissa (Stocker 2023).
 
 Ensimmäisenä meidän pitää luoda uusi hakemisto ohjelmille, joten tein sen komennolla
 ```markdown
@@ -159,7 +159,8 @@ micro roles/paketit/tasks/main.yml
 ```
 Lopuksi piti hyödyntää ansible-doc atp tiedostoa, jotta saan sisennykset sekä ohjelmat asennettua. Tiedoston lopusta löytyi muutamia esimerkkejä, ja hyödynsin niitä muun muassa, miten asennetaan useampi paketti samaan aikaan.
 
-<img width="403" height="158" alt="kuva" src="https://github.com/user-attachments/assets/a06f8eb7-5092-45a4-827e-8969b40f2abc" />
+<img width="374" height="158" alt="kuva" src="https://github.com/user-attachments/assets/a7d639f7-e8d7-4dfc-9925-ca211dd971cb" />
+
 
 Lopuksi vielä lisäsin paketit käyttäjän site.yml tiedostoon samanlailla kuin edellisessä tehtävässä uusikayttaja.
 
@@ -204,8 +205,8 @@ Nyt näytti ainakin tapahtuvan muutoksia, tarkistetaan vielä, että ohjelmat on
 - Ansible-doc apt. Luettu: 5.11.2026
 - Ansible-doc file. Luettu: 5.11.2026
 - Ansible-doc user. Luettu: 5.11.2026
-- Ansible-doc authorized_key. Luettu: 5.11.2026
-- emms 2024. dfc – report file system space usage information: luettavissa: https://www.linuxlinks.com/dfc-report-file-system-space-usage-information/. Luettu: 6.11.2026.
+- Ansible-doc authorized_key. Luettu: 5.11.2026https://www.networkworld.com/article/972132/using-the-linux-ncdu-command-to-view-your-disk-usage.html. Luettu: 6.11.2026.
+- Stocker, Sandra 2026.  Using the Linux ncdu command to view your disk usage. Luettavissa: 
 - Karvinen 2026. Sudo without password. Luettavissa: https://terokarvinen.com/passwordless-sudo/. Luettu: 5.11.2026.
 - Karvinen 2026. Passwordless Sudo with Ansible. Luettavissa: https://terokarvinen.com/passwordless-sudo-with-ansible/#. Luettu: 5.11.2026.
 - Munroe 2026. Sandwitch. Luettavissa: https://xkcd.com/149/. Luettu: 5.11.2026.
