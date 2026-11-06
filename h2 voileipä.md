@@ -112,6 +112,20 @@ Lopuksin testasin vielä, että pääsin kirjautumaan ssh:lla ilman salasanaa ko
 
 ## b) antero. Tee salasanaton, automaattisesti ssh:lla kirjautuva tunnus Ansiblella
 
+Aloitin tehtävän menemällä janne käyttäjällä ansible hakemistoon. Tämän jälkeen katsoin komennolla `tree -F` hakemistorakennetta. Päätin luoda ensimmäiseksi luoda hakemistorakenteen komennolla 'mkdir -p roles/uusikayttaja/tasks', jossa saadaan kaikki yläkansiot myös luotua.
+
+<img width="698" height="493" alt="kuva" src="https://github.com/user-attachments/assets/c5ed0e7a-948c-4d78-8ed7-331d884b9af6" />
+
+Seuraavaksi luodaan main.yml tiedosto komennolla, jonka jälkeen luodaaan koodina tarvittavat tiedot.
+
+```markdown
+micro roles/uusikayttaja/tasks/main.yml
+```
+
+
+
+
+<img width="891" height="759" alt="kuva" src="https://github.com/user-attachments/assets/21dc2e10-ffbc-4a91-ba66-a2b0f759f799" />
 
 
 
