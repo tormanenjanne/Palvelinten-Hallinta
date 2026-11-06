@@ -100,6 +100,21 @@ Seuraavaksi testasin kirjautua ssh:lla, mutta se kysyi tässä vielä salasanaa.
 
 <img width="722" height="279" alt="kuva" src="https://github.com/user-attachments/assets/7e3d1e86-5833-4da3-bd1a-1a49ba1b0032" />
 
+Tilanteen korjaamiseen, lisätään vielä julkinenavain testikayttajalle. Ensimmäiseksi kirjaudutaan ulos testikayttajalta, ja sitten lisätään julkinen ssh-avain komennolla `ssh-copy-id testikayttaja@localhost`. Tästä tulee ilmoitus vielä, että avaimen lisääminen on onnistunut.
+
+
+<img width="940" height="227" alt="kuva" src="https://github.com/user-attachments/assets/04a2224e-ec26-4a31-8612-cf71fd5de197" />
+
+Lopuksin testasin vielä, että pääsin kirjautumaan ssh:lla ilman salasanaa komennolla `ssh testikayttaja@localhost`. Lopputulos oli onnistunut, ja testikayttajalla onnistui ssh:lla kirjautuminen ilman salasanaa.
+
+
+<img width="946" height="226" alt="kuva" src="https://github.com/user-attachments/assets/eff962e8-7c99-4494-89c4-d4d92ee25f6a" />
+
+## b) antero. Tee salasanaton, automaattisesti ssh:lla kirjautuva tunnus Ansiblella
+
+
+
+
 
 
 
