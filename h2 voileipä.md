@@ -180,14 +180,36 @@ Korjasin myös samalla tuon update_cache samalle riville, kokeilin uudelleen ajo
 
 Nyt näytti ainakin tapahtuvan muutoksia, tarkistetaan vielä, että ohjelmat on asentunut.
 
+komennolla `htop` aukesi htop ohjelma sekä komennolla `ncdu` aukesi myös tämä ohjelma, tässä on vielä kuvat. 
+<img width="712" height="262" alt="kuva" src="https://github.com/user-attachments/assets/c0f95ff5-235c-4271-8f68-b847dbf9d56a" />
+
+<img width="726" height="404" alt="kuva" src="https://github.com/user-attachments/assets/91a06c74-0f32-4fb3-a950-3822d3df5f54" />
+
+Tehtävä oli siis onnistunut!
+
+## d) file
+
+Lähdin taas luomaan uuden hakemistorakenteen komennolla:
+```markdown
+mkdir -p roles/files/tasks
+```
+
+Sekä main.yml tiedoston komennolla:
+```markdown
+micro roles/files/tasks/main.yml
+```
+
+Tehtävän tekemisessä hyödynsin ansible-doc copy, jossa oli ohjeistettiin käyttään pipe komentoa.
+
+<img width="493" height="213" alt="kuva" src="https://github.com/user-attachments/assets/46de5cd5-e78c-49aa-834e-e9a21186223c" />
+
+Lopuksi ajoin playbooksin, ja tuloksesta näkyy, että muuttaja on tullut.
+<img width="934" height="152" alt="kuva" src="https://github.com/user-attachments/assets/8d2a13c7-a585-47bf-85c1-495b39d7238f" />
 
 
+testasin vielä, että tiedosto näkyy `ls -l` komennolla ja `cat tiedosto.txt` sain näkyviin tiedoston, ja sen sisällön.
 
-
-
-
-
-
+<img width="560" height="290" alt="kuva" src="https://github.com/user-attachments/assets/28e70f12-f194-46cf-aafb-62139c44ec3a" />
 
 
 
