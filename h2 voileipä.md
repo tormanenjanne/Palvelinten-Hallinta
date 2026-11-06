@@ -80,6 +80,27 @@ sudo adduser testikayttaja
 sudo groupadd sudoless
 sudo adduser testikayttaja sudoles
 ```
+<img width="948" height="334" alt="kuva" src="https://github.com/user-attachments/assets/8a51596c-f604-4d47-bf31-64597624669f" />
+
+Avasin myös uuden terminaalin, ja käytin komentoa sudo -i, jotta pääsen root-käyttäjksi. Tällä terminaalilla voimme korjata sudon, jos rikomme sen. Jatketaan normaalinkäyttäjän terminaalissa.
+
+Seurvaaksi lisättiin sääntö sudoless ryhmään `sudo visudo /etc/sudoers.d/sudoless`, ja komento sääntöön oli tämä:
+
+```markdown
+%sudoless ALL = (ALL) NOPASSWD: ALL
+```
+- %sudoless = tarkoittaa ryhmää.
+- ALL = kaikille ryhmän koneille.
+- (ALL) = mille käyttäjille.
+-  NOPASSWD: ALL == ensimmäinen on promti, ettei tarvitse salasanaa ja all kuvastaa tätä kaikille.
+
+<img width="719" height="204" alt="kuva" src="https://github.com/user-attachments/assets/afcf6445-e554-4d1a-a13b-7ad1db3a8b57" />
+
+Seuraavaksi testasin kirjautua ssh:lla, mutta se kysyi tässä vielä salasanaa. kohdassa `sudo -k` (-k unohtaa tässä mahdolliset salasanat) ja testasin komennolla `sudo echo "testi"`, jotta tässä ei tulisi salasanan kyselyä, ja näinhän siinä kävi! Tämä tapahui käyttäen komentoa `sudo -k`.
+
+<img width="722" height="279" alt="kuva" src="https://github.com/user-attachments/assets/7e3d1e86-5833-4da3-bd1a-1a49ba1b0032" />
+
+
 
 
 
