@@ -211,7 +211,7 @@ testasin vielä, että tiedosto näkyy `ls -l` komennolla ja `cat tiedosto.txt` 
 
 <img width="560" height="290" alt="kuva" src="https://github.com/user-attachments/assets/28e70f12-f194-46cf-aafb-62139c44ec3a" />
 
-Tässä tiedostossa on siis omistajalla luku ja kirjoitus mahdollisuudet. Ryhmillä sekä muilla ei ole mitään oikeuksia.
+Tässä tiedostossa on siis omistajalla luku ja kirjoitus mahdollisuudet. Ryhmillä sekä muilla ei ole mitään oikeuksia. symboolinen muoto on `-rw------- `.
 
 ## e) jotain muuta
 
