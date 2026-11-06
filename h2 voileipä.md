@@ -96,7 +96,7 @@ Seurvaaksi lisättiin sääntö sudoless ryhmään `sudo visudo /etc/sudoers.d/s
 
 <img width="719" height="204" alt="kuva" src="https://github.com/user-attachments/assets/afcf6445-e554-4d1a-a13b-7ad1db3a8b57" />
 
-Seuraavaksi testasin kirjautua ssh:lla, mutta se kysyi tässä vielä salasanaa. kohdassa `sudo -k` (-k unohtaa tässä mahdolliset salasanat) ja testasin komennolla `sudo echo "testi"`, jotta tässä ei tulisi salasanan kyselyä, ja näinhän siinä kävi! Tämä tapahui käyttäen komentoa `sudo -k`.
+Seuraavaksi testasin kirjautua ssh:lla, mutta se kysyi tässä vielä salasanaa. kohdassa `sudo -k` (-k unohtaa tässä mahdolliset salasanat) ja testasin komennolla `sudo echo "testi"`, jotta tässä ei tulisi salasanan kyselyä, ja näinhän siinä kävi! Tämä tapahui käyttäen komentoa `sudo -K`, joka käyttää become salasanaa.
 
 <img width="722" height="279" alt="kuva" src="https://github.com/user-attachments/assets/7e3d1e86-5833-4da3-bd1a-1a49ba1b0032" />
 
