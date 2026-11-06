@@ -143,7 +143,51 @@ Nyt testataan ajoa, mielestäni kaikki pitäisi olla nyt kunnossa..
 playbook ajo näyttää, että .
 
 <img width="940" height="256" alt="kuva" src="https://github.com/user-attachments/assets/10db94b0-70b8-4377-bf9e-5c1f0a5bb03f" />
-root oikeudet kuva
+
+
+# c) package. asenna pari pakettia.
+
+Lähdin asentamaan Googlauksen jälkeen pari kevyttä ohjelmaa htop ja dfc. Htop on komentoriviohjelma, jolla voidaan tarkkailla ja hallita prosesseja. (linux.fi), ja dfc ohjelma, joka näyttää levytilaa värikoodeilla. (emms 2024).
+
+Ensimmäisenä meidän pitää luoda uusi hakemisto ohjelmille, joten tein sen komennolla
+```markdown
+mkdir -p roles/paketit/tasks
+```
+Seuraavksi taas main.yml tiedosto tänne hakemistoon komennolla:
+```markdown
+micro roles/paketit/tasks/main.yml
+```
+Lopuksi piti hyödyntää ansible-doc atp tiedostoa, jotta saan sisennykset sekä ohjelmat asennettua. Tiedoston lopusta löytyi muutamia esimerkkejä, ja hyödynsin niitä muun muassa, miten asennetaan useampi paketti samaan aikaan.
+
+<img width="403" height="158" alt="kuva" src="https://github.com/user-attachments/assets/a06f8eb7-5092-45a4-827e-8969b40f2abc" />
+
+Lopuksi vielä lisäsin paketit käyttäjän site.yml tiedostoon samanlailla kuin edellisessä tehtävässä uusikayttaja.
+
+<img width="416" height="184" alt="kuva" src="https://github.com/user-attachments/assets/78933855-0d4d-41fa-a8fb-d0f0c13eaea1" />
+
+sitten vain ajo playbookilla.
+
+<img width="644" height="103" alt="kuva" src="https://github.com/user-attachments/assets/4c531c69-bb9c-4585-b20e-36b226bdeace" />
+
+jaahas.. virheilmoitus. Pienen päättelyn jälkeen, ilmeisesti ensimmäinen - name sekä state tilat ovat samassa sinnyksessä. Korjataan siten, että state on tuossa toisessa name kohdassa samassa sisennyksessä.
+
+<img width="510" height="186" alt="kuva" src="https://github.com/user-attachments/assets/194c959c-f28a-46f5-a23c-cb5dab3d9b8b" />
+
+Korjasin myös samalla tuon update_cache samalle riville, kokeilin uudelleen ajoa.
+
+<img width="702" height="114" alt="kuva" src="https://github.com/user-attachments/assets/dd6e1581-e774-4e6f-8da0-a0270c772dcf" />
+
+Nyt näytti ainakin tapahtuvan muutoksia, tarkistetaan vielä, että ohjelmat on asentunut.
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -161,6 +205,7 @@ root oikeudet kuva
 - Ansible-doc file. Luettu: 5.11.2026
 - Ansible-doc user. Luettu: 5.11.2026
 - Ansible-doc authorized_key. Luettu: 5.11.2026
+- emms 2024. dfc – report file system space usage information: luettavissa: https://www.linuxlinks.com/dfc-report-file-system-space-usage-information/. Luettu: 6.11.2026.
 - Karvinen 2026. Sudo without password. Luettavissa: https://terokarvinen.com/passwordless-sudo/. Luettu: 5.11.2026.
 - Karvinen 2026. Passwordless Sudo with Ansible. Luettavissa: https://terokarvinen.com/passwordless-sudo-with-ansible/#. Luettu: 5.11.2026.
 - Munroe 2026. Sandwitch. Luettavissa: https://xkcd.com/149/. Luettu: 5.11.2026.
