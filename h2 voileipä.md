@@ -136,11 +136,7 @@ Seuraavaksi lisäsin `uusikayttaja` hosts.ini tiedostoon ja vielä Teron ohjeist
 
 <img width="365" height="147" alt="kuva" src="https://github.com/user-attachments/assets/34c34ac8-169b-4127-b0ff-30fe1319aa35" />
 
-Vielä lopuksi laitoin hosts.ini tiedostoon komennon `localhost ansible_user=uusikayttaja`. Varmistin tämän jonkun toisen oppilaan työstä, joka oli tehnyt samaa tehtävää. (Sharlil 2025).
-
 Nyt testataan ajoa, mielestäni kaikki pitäisi olla nyt kunnossa..
-
-
 
 
 <img width="947" height="480" alt="kuva" src="https://github.com/user-attachments/assets/a019e893-550a-4ad1-8271-f54353320c06" />
