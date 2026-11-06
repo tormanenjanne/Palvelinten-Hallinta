@@ -226,9 +226,18 @@ mkdir -p roles/debug/tasks
 micro roles/debug/tasks/main.yml
 ```
 
-
-
 <img width="704" height="160" alt="kuva" src="https://github.com/user-attachments/assets/66c5b023-eff3-4c0f-aa75-502eca0abd36" />
+
+Lopuksi vielä lisätään `debug` site.yml tiedostoon.
+
+<img width="318" height="207" alt="kuva" src="https://github.com/user-attachments/assets/c2ec1f50-b5a8-4ee2-b90f-134aefeefb4a" />
+
+Sitten taas playbook ajoa
+
+<img width="945" height="207" alt="kuva" src="https://github.com/user-attachments/assets/df8fe6e9-d3a3-4298-b99e-bb09050e7cd1" />
+
+Kuten näemme kuvasta, viesti on tullut onnistuneesta ajosta. Toisaalta tässä voisi myös hyödyntää jotain muuttujia, jos haluaisin tarkemmin selvittää jotain. Mutta tässä nyt on vain esimerkki siitä, että ansible toimii!
+
 
 
 ## Lähteet
