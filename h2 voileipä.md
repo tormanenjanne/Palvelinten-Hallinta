@@ -33,7 +33,7 @@
 ### ansible-doc apt
 Paketinhallinta ohjelma
 - name: Listaa paketin nimestä sekä mikä versio on käytössä.
-- State: Asentaa viimeisimmän version paketista.
+- State: paketin tila voi olla: `latest`== viimeisin versio paketista, `absent`==poistaa paketin, `present`== asentaa paketin, jos sitä ei ole vielä.
 - Update_cache: Suorittaa saman komennon kuin `apt-get update`. Tämä komento voi olla mukana pakettien asennuksessa tai jälkeenpäin. Oletuksena ei päivitetä välimuistia. (Ansible-doc apt)
 
 <img width="723" height="433" alt="kuva" src="https://github.com/user-attachments/assets/0a320e1c-d322-4b20-8dfe-e4cc92a12b2f" />
