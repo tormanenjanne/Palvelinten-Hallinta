@@ -236,9 +236,11 @@ Sitten taas playbook ajoa
 
 <img width="945" height="207" alt="kuva" src="https://github.com/user-attachments/assets/df8fe6e9-d3a3-4298-b99e-bb09050e7cd1" />
 
-Kuten näemme kuvasta, viesti on tullut onnistuneesta ajosta. Toisaalta tässä voisi myös hyödyntää jotain muuttujia, jos haluaisin tarkemmin selvittää jotain. Mutta tässä nyt on vain esimerkki siitä, että ansible toimii!
+Kuten näemme kuvasta, viesti on tullut onnistuneesta tehtävän ajosta. Toisaalta tässä voisi myös hyödyntää jotain muuttujia, jos haluaisin tarkemmin selvittää jotain. Mutta tässä nyt on vain esimerkki siitä, että ansible toimii!
 
+## Yhteenveto
 
+Ajallisesti tähän meni varmaan noin 8-9 tuntia taukojen kanssa. Aluksi toiminta oli todella hidasta, sekä meni aikaa tajuta sisennykset sekä rakenne yleisesti ansiblessa. Tehtävien teko nopeutui huomattavasti loppua kohden. 
 
 ## Lähteet
 - Ansible doc-copy. Luettu: 5.11.2026
