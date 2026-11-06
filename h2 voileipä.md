@@ -110,6 +110,7 @@ Lopuksin testasin vielä, että pääsin kirjautumaan ssh:lla ilman salasanaa ko
 
 <img width="946" height="226" alt="kuva" src="https://github.com/user-attachments/assets/eff962e8-7c99-4494-89c4-d4d92ee25f6a" />
 
+
 ## b) antero. Tee salasanaton, automaattisesti ssh:lla kirjautuva tunnus Ansiblella
 
 Aloitin tehtävän menemällä janne käyttäjällä ansible hakemistoon. Tämän jälkeen katsoin komennolla `tree -F` hakemistorakennetta. Päätin luoda ensimmäiseksi luoda hakemistorakenteen komennolla 'mkdir -p roles/uusikayttaja/tasks', jossa saadaan kaikki yläkansiot myös luotua.
@@ -131,9 +132,23 @@ micro roles/uusikayttaja/tasks/main.yml
 
 Julkisenavaimen tiedot kävin hakemassa ssh kansiosta, ja tiedoston lopussa pitää olla .pub, jotta tiedetään, että kyseessä on julkinen avain. Tämän avasin komennolla `cat ja/tiedostonimi.pub`. Lopuksi siirsin copy pastella julkisen avaimen uusikayttajan main.yml tiedostolle.
 
-Lopuksi vielä lisäsin `uusikayttaja` hosts.ini tiedostoon ja vielä Teron ohjeistuksien mukaan lisäsin site.yml tiedostoon vielä `become:true` ja roles `- uusikayttaja`
+Seuraavaksi lisäsin `uusikayttaja` hosts.ini tiedostoon ja vielä Teron ohjeistuksien mukaan lisäsin site.yml tiedostoon vielä `become:true` ja roles `- uusikayttaja`
 
 <img width="365" height="147" alt="kuva" src="https://github.com/user-attachments/assets/34c34ac8-169b-4127-b0ff-30fe1319aa35" />
+
+Vielä lopuksi laitoin hosts.ini tiedostoon komennon `localhost ansible_user=uusikayttaja`. Varmistin tämän jonkun toisen oppilaan työstä, joka oli tehnyt samaa tehtävää. (Sharlil 2025).
+
+Nyt testataan ajoa, mielestäni kaikki pitäisi olla nyt kunnossa..
+
+
+
+
+<img width="947" height="480" alt="kuva" src="https://github.com/user-attachments/assets/a019e893-550a-4ad1-8271-f54353320c06" />
+playbook ajo.
+
+<img width="940" height="256" alt="kuva" src="https://github.com/user-attachments/assets/10db94b0-70b8-4377-bf9e-5c1f0a5bb03f" />
+root oikeudet kuva
+
 
 
 
