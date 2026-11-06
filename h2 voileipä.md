@@ -199,7 +199,7 @@ Sekä main.yml tiedoston komennolla:
 micro roles/files/tasks/main.yml
 ```
 
-Tehtävän tekemisessä hyödynsin ansible-doc copy, jossa oli ohjeistettiin käyttään pipe komentoa.
+Tehtävän tekemisessä hyödynsin ansible-doc copy dokumenttia sekä spaceliftin artikkelia, jossa oli kerrottiin pipesta "|" yaml:ssa, jossa voidaan hyödyntää rivinvaihtoa. (ansible-cod copy; spacelift 2025)
 
 <img width="493" height="213" alt="kuva" src="https://github.com/user-attachments/assets/46de5cd5-e78c-49aa-834e-e9a21186223c" />
 
@@ -224,4 +224,4 @@ Tässä tiedostossa on siis omistajalla luku ja kirjoitus mahdollisuudet. Ryhmil
 - Karvinen 2026. Sudo without password. Luettavissa: https://terokarvinen.com/passwordless-sudo/. Luettu: 5.11.2026.
 - Karvinen 2026. Passwordless Sudo with Ansible. Luettavissa: https://terokarvinen.com/passwordless-sudo-with-ansible/#. Luettu: 5.11.2026.
 - Munroe 2026. Sandwitch. Luettavissa: https://xkcd.com/149/. Luettu: 5.11.2026.
-- 
+- spacelift 2025. How to Add Comments in a YAML File [Tutorial]. Luettavissa: https://spacelift.io/blog/yaml-comments. Luettu: 6.11.2026.
