@@ -70,6 +70,17 @@ Lisätään tai poistetaan ssh-avain käyttäjältä
 
 <img width="724" height="428" alt="kuva" src="https://github.com/user-attachments/assets/43b257ee-b806-4729-b4dd-ce212374a2d3" />
 
+## a) sudoless. Tee ansiblea varten tunnus, jolla voi käyttää sudoa ilman salasanaa. Sekä ssh-kirjautuminen että sudon käyttö tulee olla ansbilea varten automatisoitu.
+
+Ensimmäiseksi tein teron ohjeistuksien mukaan uuden käyttäjän, loin uuden käyttäjänryhmän `groupadd`, ja lisäsin testikayttajan sudoless ryhmään. Komennot löytyvät tästä:
+
+
+```markdown
+sudo adduser testikayttaja
+sudo groupadd sudoless
+sudo adduser testikayttaja sudoles
+```
+
 
 
 
