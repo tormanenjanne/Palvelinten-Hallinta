@@ -213,6 +213,23 @@ testasin vielä, että tiedosto näkyy `ls -l` komennolla ja `cat tiedosto.txt` 
 
 Tässä tiedostossa on siis omistajalla luku ja kirjoitus mahdollisuudet. Ryhmillä sekä muilla ei ole mitään oikeuksia.
 
+## e) jotain muuta
+
+otin vaihtoehdoksi ansible.builtin.debug, joka tulostaa tässä tapauksessa tekstiä Playbookin aikana. Tämä voi olla oivallinen debuggaukseen, joka ilmoittaa esimerkiksi jotain tekstiä Playbook ajossa, jos haluaa etsiä vikaa, miksi joku ei toimi (ansible-doc debug)
+
+Toistin siis samaa kaava, ja loin uuden tiedostorakenteen sekä main.yml
+
+```markdown
+mkdir -p roles/debug/tasks
+```
+```markdown
+micro roles/debug/tasks/main.yml
+```
+
+
+
+<img width="704" height="160" alt="kuva" src="https://github.com/user-attachments/assets/66c5b023-eff3-4c0f-aa75-502eca0abd36" />
+
 
 ## Lähteet
 - Ansible doc-copy. Luettu: 5.11.2026
