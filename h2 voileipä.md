@@ -66,7 +66,7 @@ Hallitaan käyttäjiä sekä oikeuksia
 ### ansible-doc authorized_key
 Lisätään tai poistetaan ssh-avain käyttäjältä
 - user: Käyttäjänimi orjakoneella, jonka ssh-avaimia voidaan muuttaa.
-- key: julkisen ssh-avaimen siirtäminen käyttäjälle esimerkiksi Github kautta. (ansible-doc authorized_key)
+- key: julkinen avain siirretään tähän kenttään. (ansible-doc authorized_key)
 
 <img width="724" height="428" alt="kuva" src="https://github.com/user-attachments/assets/43b257ee-b806-4729-b4dd-ce212374a2d3" />
 
