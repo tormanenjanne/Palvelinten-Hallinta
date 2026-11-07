@@ -204,7 +204,9 @@ Tehtävän tekemisessä hyödynsin ansible-doc copy dokumenttia sekä spacelifti
 
 <img width="493" height="213" alt="kuva" src="https://github.com/user-attachments/assets/46de5cd5-e78c-49aa-834e-e9a21186223c" />
 
-Lopuksi ajoin playbooksin, ja tuloksesta näkyy, että muuttaja on tullut.
+
+
+Lisäsin vielä site.yml tiedostoon files käyttäjän, ja lopuksi ajoin playbooksin, ja tuloksesta näkyy, että muuttaja on tullut.
 <img width="934" height="152" alt="kuva" src="https://github.com/user-attachments/assets/8d2a13c7-a585-47bf-85c1-495b39d7238f" />
 
 
