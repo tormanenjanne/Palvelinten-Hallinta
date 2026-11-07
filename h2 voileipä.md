@@ -251,5 +251,6 @@ Ajallisesti tähän meni varmaan noin 8-9 tuntia taukojen kanssa. Aluksi toimint
 - Stocker, Sandra 2026.  Using the Linux ncdu command to view your disk usage. Luettavissa: 
 - Karvinen 2026. Sudo without password. Luettavissa: https://terokarvinen.com/passwordless-sudo/. Luettu: 5.11.2026.
 - Karvinen 2026. Passwordless Sudo with Ansible. Luettavissa: https://terokarvinen.com/passwordless-sudo-with-ansible/#. Luettu: 5.11.2026.
+- Linux.fi. htop. Luettavissa: https://www.linux.fi/wiki/Htop. Luettu: 6.11.2026.
 - Munroe 2026. Sandwitch. Luettavissa: https://xkcd.com/149/. Luettu: 5.11.2026.
 - spacelift 2025. How to Add Comments in a YAML File [Tutorial]. Luettavissa: https://spacelift.io/blog/yaml-comments. Luettu: 6.11.2026.
