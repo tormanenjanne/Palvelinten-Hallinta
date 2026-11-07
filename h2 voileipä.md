@@ -243,7 +243,7 @@ Kuten näemme kuvasta, viesti on tullut onnistuneesta tehtävän ajosta. Toisaal
 
 ## Yhteenveto
 
-Ajallisesti tähän meni varmaan noin 8-9 tuntia taukojen kanssa. Aluksi toiminta oli todella hidasta, sekä meni aikaa tajuta sisennykset sekä rakenne yleisesti ansiblessa. Tehtävien teko nopeutui huomattavasti loppua kohden. 
+Ajallisesti tähän meni varmaan noin 8-9 tuntia taukojen kanssa. Aluksi toiminta oli todella hidasta, sekä meni aikaa tajuta sisennykset sekä rakenne yleisesti ansiblessa. Tehtävien teko nopeutui huomattavasti loppua kohden. Tehtävässä oli mielestäni erittäin hyödyllistä sen toistettavuus, jotta ansible käyttö muuttusi helpommaksi.
 
 ## Lähteet
 - Ansible doc-copy. Luettu: 5.11.2026.
