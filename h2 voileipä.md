@@ -140,7 +140,8 @@ Nyt testataan ajoa, mielestäni kaikki pitäisi olla nyt kunnossa..
 
 
 <img width="947" height="480" alt="kuva" src="https://github.com/user-attachments/assets/a019e893-550a-4ad1-8271-f54353320c06" />
-playbook ajo näyttää, että .
+
+Lopuksi testasin vielä kirjautumista ssh-yhteydellä `ssh uusikayttaja@localhost`
 
 <img width="940" height="256" alt="kuva" src="https://github.com/user-attachments/assets/10db94b0-70b8-4377-bf9e-5c1f0a5bb03f" />
 
