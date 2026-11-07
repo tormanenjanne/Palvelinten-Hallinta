@@ -54,7 +54,7 @@ Voidaan määrittää tiedostojen, hakemistojen tai symboolisten linkkien kohtee
 ### ansible-doc user
 Hallitaan käyttäjiä sekä oikeuksia
 - name: Käyttäjän nimi
-- create_home: jos asetus on `false`, käyttäjälle luodaan kotihakemisto ellei sitä ole jo olemassa.
+- create_home: jos asetus on `true`, käyttäjälle luodaan kotihakemisto ellei sitä ole jo olemassa.
 - comment: Kommenttikenttä
 - groups: Lisäryhmä luettelo, jossa käyttäjä on myös mukana. Oletusarvoisesti käyttäjä on poistettu kaikista ryhmistä. `append` komennolla voidaan lisätä käyttäjä
 - shell: mitä komento-ohjelmaa käyttäjä käyttää
