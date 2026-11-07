@@ -78,7 +78,7 @@ Ensimmäiseksi tein teron ohjeistuksien mukaan uuden käyttäjän, loin uuden k�
 ```markdown
 sudo adduser testikayttaja
 sudo groupadd sudoless
-sudo adduser testikayttaja sudoles
+sudo adduser testikayttaja sudoless
 ```
 <img width="948" height="334" alt="kuva" src="https://github.com/user-attachments/assets/8a51596c-f604-4d47-bf31-64597624669f" />
 
