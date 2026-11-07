@@ -24,8 +24,8 @@
 - dest: etäkoneen/orjakoneelle polku
 - src: Lokaalin koneen polku orjakoneelle
 - Owner: Tiedoston omistaja
-- Group: Käyttäjät, ketkä kuuluvat ryhmään
-- mode: Mitkä oikeudet annetaan kohteelle (Ansible-doc copy)
+- Group: Ryhmä, kenellä on oikeus käyttää tiedostoa
+- mode: Mitkä oikeudet annetaan kohteelle, voi olla joko symboolisessa muodossa tai bitteinä (Ansible-doc copy)
 
 <img width="715" height="390" alt="kuva" src="https://github.com/user-attachments/assets/77d30ced-4d43-4436-9dc0-44e8373d43dc" />
 
