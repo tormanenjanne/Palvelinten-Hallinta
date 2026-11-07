@@ -244,12 +244,12 @@ Kuten näemme kuvasta, viesti on tullut onnistuneesta tehtävän ajosta. Toisaal
 Ajallisesti tähän meni varmaan noin 8-9 tuntia taukojen kanssa. Aluksi toiminta oli todella hidasta, sekä meni aikaa tajuta sisennykset sekä rakenne yleisesti ansiblessa. Tehtävien teko nopeutui huomattavasti loppua kohden. 
 
 ## Lähteet
-- Ansible doc-copy. Luettu: 5.11.2026
-- Ansible-doc apt. Luettu: 5.11.2026
-- Ansible-doc file. Luettu: 5.11.2026
-- Ansible-doc user. Luettu: 5.11.2026
-- Ansible-doc authorized_key. Luettu: 5.11.2026https://www.networkworld.com/article/972132/using-the-linux-ncdu-command-to-view-your-disk-usage.html. Luettu: 6.11.2026.
-- Stocker, Sandra 2026.  Using the Linux ncdu command to view your disk usage. Luettavissa: 
+- Ansible doc-copy. Luettu: 5.11.2026.
+- Ansible-doc apt. Luettu: 5.11.2026.
+- Ansible-doc file. Luettu: 5.11.2026.
+- Ansible-doc user. Luettu: 5.11.2026.
+- Ansible-doc authorized_key. Luettu: 5.11.2026.
+- Stocker, Sandra 2026.  Using the Linux ncdu command to view your disk usage. Luettavissa: https://www.networkworld.com/article/972132/using-the-linux-ncdu-command-to-view-your-disk-usage.html. Luettu: 6.11.2026.
 - Karvinen 2026. Sudo without password. Luettavissa: https://terokarvinen.com/passwordless-sudo/. Luettu: 5.11.2026.
 - Karvinen 2026. Passwordless Sudo with Ansible. Luettavissa: https://terokarvinen.com/passwordless-sudo-with-ansible/#. Luettu: 5.11.2026.
 - Linux.fi. htop. Luettavissa: https://www.linux.fi/wiki/Htop. Luettu: 6.11.2026.
