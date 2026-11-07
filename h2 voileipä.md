@@ -8,7 +8,7 @@
 - Lopuksi testataan sen toimivuutta kirjautumalla ssh:lla sisään, ja esimerkiksi echo viestillä sen toimivuutta.
 
 ### Sandwitch
-- Sarjakuvassa käydään sudo oikeuden vahvuus.
+- Sarjakuvassa käydään sudo-oikeuden vahvuus.
 - Ensimmäiseksi sohvalla istuva kaveri kysyy tee minulle voileipä, mutta toinen kaveri vastaa tee itse.
 - Seuraavaksi sohvalla istuva kaveri käskee sudolla tee minulle voileipä, ja täten toinen kaveri tekee sen.
 - Tässä nähdään sudon vahvuus, eli root-oikeuksilla saadaan asiat tapahtumaan olisi tilanne mikä tahansa.
