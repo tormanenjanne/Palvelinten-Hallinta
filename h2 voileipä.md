@@ -170,7 +170,7 @@ sitten vain ajo playbookilla.
 
 <img width="644" height="103" alt="kuva" src="https://github.com/user-attachments/assets/4c531c69-bb9c-4585-b20e-36b226bdeace" />
 
-jaahas.. virheilmoitus. Pienen päättelyn jälkeen, ilmeisesti ensimmäinen - name sekä state tilat ovat samassa sinnyksessä. Korjataan siten, että state on tuossa toisessa name kohdassa samassa sisennyksessä.
+jaahas.. virheilmoitus. Pienen päättelyn jälkeen, ilmeisesti ensimmäinen - name sekä state tilat ovat samassa sisennyksissä. Korjataan siten, että state on tuossa toisessa name kohdassa samassa sisennyksessä.
 
 <img width="510" height="186" alt="kuva" src="https://github.com/user-attachments/assets/194c959c-f28a-46f5-a23c-cb5dab3d9b8b" />
 
