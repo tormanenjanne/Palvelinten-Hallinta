@@ -14,7 +14,7 @@ Artikkelissa käydään läpi, kuinka apache2 webpalvelin voidaan asentaa automa
 ### Handlers
 
 - Viittaan edellisen apache 2 tehtävään, jossa vähän avasin jo handlerissa: "käynnistää palvelun uudestaan, jos asetuksissa on muutoksia esimerkiksi jos uusi päivitys on tullut tähän. Tämä vaatii `notify` komennon tasks hakemiston main.yml tiedostoon."
-- handleri sisällytetään tasks hakemistoon esimerkiksi main.yml tiedostoon, jonne lisätään komento `notify`. Notifyyn pitää määritellä ne palvelimet, jotka halutaan uudelleen käynistyvän, jos jotain muutoksia on tullut
+- handleri sisällytetään tasks hakemistoon esimerkiksi main.yml tiedostoon, jonne lisätään komento `notify`. Notifyyn pitää määritellä ne palvelimet, jotka halutaan uudelleen käynistyvän, jos jotain muutoksia on tullut. esimerkiksi `restart apache2`. (Ansible 2026)
 
 ### Service
 
