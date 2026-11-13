@@ -39,7 +39,7 @@ EXAMPLES: yksi esimerkki on tässä, jolla käynnistetään httpd, jos se ei ole
 ### Hacker news
 
 
-## Asenna Apache2 käsin
+## a) Asenna Apache2 käsin
 
 Lähdin aloittamaan tehtävän päivittämällä paketit, ja sitten asentamaan Apache2 käsin näillä komennoilla
 
@@ -83,7 +83,60 @@ Katsotaan näkyykö muutokset...
 
 <img width="937" height="191" alt="kuva" src="https://github.com/user-attachments/assets/6aa44093-d849-4257-afef-5b01420e5a63" />
 
-Muutokset näkyivä, joten tehtävä on onnistunut!
+Muutokset näkyivä, joten tehtävä on onnistunut! Tässä vielä kuva, jossa näkyy omistajuudet, eli testikäyttäjällä on kirjoitus sekä luku oikeudet. (Digitalocean 2022; Karvinen 2026)
+
+
+<img width="724" height="219" alt="kuva" src="https://github.com/user-attachments/assets/5486a7b6-144a-4284-93d4-edb4a17c1bca" />
+
+## b) Moottorix, asenna Nginx käsin.
+
+Asensin ensimmäisenä Nginx komennolla ` sudo apt install nginx`, ja tämän jälkeen Teron ohjeistuksien mukaan, apache2 piti sulkea. Käytin tässä komentoa `sudo systemctl stop apache2` ja käynnistin nginx komennolla `sudo systemctl start nginx`. Lopuksi vielä testasin komennolla ` systemctl status apache2` ja `systemctl status nginx`.
+
+<img width="709" height="352" alt="kuva" src="https://github.com/user-attachments/assets/da2ac870-f923-4227-9462-4e8ce58691b0" />
+
+Kuten huomaamme kuvasta, Apache2 active kohta = dead ja nginx on = running, eli nginx on päällä ja apache2 on pois päältä.
+
+sekä localhost osoite toimii kanssa. Tässä piti vähän kaivella oikeaa osoitetta, mutta se löytyi /var/www/html`, ja oikea osoite oli tämä: http://localhost/index.nginx-debian.html
+
+
+<img width="862" height="336" alt="kuva" src="https://github.com/user-attachments/assets/ff6eb746-345f-4b08-b156-a6ce9c619b30" />
+
+Seuraavaksi loin hakemiston `sudo mkdir /home/testikayttaja/nginxtestisivu`, sekä loin tiedoston tänne komennolla `sudo mkdir /home/testikayttaja/nginxtestisivu`.
+
+
+<img width="826" height="180" alt="kuva" src="https://github.com/user-attachments/assets/0922f13f-83bd-4ae5-8c70-f19a8429e647" />
+
+Seuraavaksi oikeudet.
+
+```markdown
+chmod ugo+x /home/testikayttaja/
+chmod ugo+x /home/testikayttaja/nginxtestisivu/
+chmod ugo+r /home/testikayttaja/nginxtestisivu/index.html
+sudo chown -R testikayttaja:testikayttaja /home/testikayttaja/nginxtestisivu
+```
+
+nämä antavat oikeudet execute oikeudet hakemistoihin sekä tiedostoon lukuoikeus. lopussa vaihdoin omistajaksi testikayttaja.
+
+Seuraavaksi loin asetustiedoston komennolla `sudo nano /etc/nginx/sites-available/nginxtestisivu`, ja lisäsin tällaisen sisällön.
+
+<img width="905" height="282" alt="kuva" src="https://github.com/user-attachments/assets/7f09a708-e841-4aa4-8dde-0a7464556731" />
+
+Seuraavaksi ajoin komennon `sudo ln -s /etc/nginx/sites-available/nginxtestisivu /etc/nginx/sites-enabled/`, jolla luodaan symbolinen linkki, ja lopuksi komento `sudo nginx -t`, jotta ei ole mitään virheitä 
+
+<img width="606" height="56" alt="kuva" src="https://github.com/user-attachments/assets/bad25aeb-4d1d-47c2-be53-c5f7b06f3f70" />
+
+lopuksi `sudo systemctl restart nginx`, ja sivusto toimii!
+
+
+<img width="956" height="168" alt="kuva" src="https://github.com/user-attachments/assets/5ea9924b-cb88-48ee-a265-611566ca3cd8" />
+
+
+<img width="960" height="167" alt="kuva" src="https://github.com/user-attachments/assets/9e8623ec-147e-41dd-8b7b-177b9d937fd4" />
+
+<img width="953" height="172" alt="kuva" src="https://github.com/user-attachments/assets/5f64327c-81e1-4349-bb90-89e7b22d0b95" />
+
+
+
 
 
 
@@ -97,7 +150,5 @@ Muutokset näkyivä, joten tehtävä on onnistunut!
 - Ansible doc file
 - Ansible doc-handers 
 - Ansible-doc service
+- Digitalocean 2022. Install Apache Web Server on Debian: Full Guide. Luettavissa: https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-debian-11. Luettu 13.11.2026.
 - Karvinen 2026. Luettavissa: https://terokarvinen.com/apache-ansible/. Luettu: 12.11.2026
-- 
-
-- 
