@@ -133,7 +133,12 @@ lopuksi `sudo systemctl restart nginx`, ja sivusto toimii!
 
 <img width="960" height="167" alt="kuva" src="https://github.com/user-attachments/assets/9e8623ec-147e-41dd-8b7b-177b9d937fd4" />
 
+Lopuksi tein testikäyttäjällä testauksen, saanko ilman sudo-oikeuksia tehtyä muutoksia. Kirjauduin sisään, ja komennolla `nano /home/testikayttaja/nginxtestisivu/index.html ` pääsin muokkaamaan sivustoa. Alhaalla vielä kuva tästä, sekä cat komennolla näytettävä sisältö.
+
 <img width="953" height="172" alt="kuva" src="https://github.com/user-attachments/assets/5f64327c-81e1-4349-bb90-89e7b22d0b95" />
+
+<img width="919" height="194" alt="kuva" src="https://github.com/user-attachments/assets/2a61d976-a64d-41c6-b74f-8fafda2cef8e" />
+
 
 
 
