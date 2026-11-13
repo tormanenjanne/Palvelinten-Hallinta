@@ -53,7 +53,7 @@ sudo apt-get upgrade
 sudo apt install apache2
 ```
 
-Seuraavaksi testasin komennolla `sudo apt systemctl apache2`, että ohjelma pyörii ja kokeilin vielä selaimessa, jotta saan auki apache2 oletussivun auki.
+Seuraavaksi testasin komennolla `systemctl status apache2`, että ohjelma pyörii ja kokeilin vielä selaimessa, jotta saan auki apache2 oletussivun auki.
 
 <img width="715" height="332" alt="kuva" src="https://github.com/user-attachments/assets/a2def39b-cdd7-411a-a374-fbb3cc27ef9c" />
 
