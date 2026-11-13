@@ -38,6 +38,10 @@ EXAMPLES: yksi esimerkki on tässä, jolla käynnistetään httpd, jos se ei ole
 
 ### Hacker news
 
+- Artikkelissa avataan Enroll työkalua, jolla voidaan kerätä järjestelmätietoja muun muassa paketeista, ja mitkä tiedostot eroavat oletusasetuksista. työkalulla kerätään ensimmäiseksi tiedot, ja tämän jälkeen siirretään Ansibleen.
+- Datasta voidaan muodostaa muun muassa ansiblen rooleiksi, ja eri tiedostoiksi.
+- Yhteenvetona tämä ohjelma siis muuttaa manuaalisesti asennetut ohjelmat ansibleen sopivaan muotoon, mutta ne pitää vielä jokatapauksessa itse tarkistaa.
+- Kommenttikentässä ollaan oltu innostuneita tästä, ja osa on kokeillut jo tätä työkalua. Palaute on ollut positiivista. (Hacker News 2026; Enroll s.a)
 
 ## a) Asenna Apache2 käsin
 
@@ -46,7 +50,7 @@ Lähdin aloittamaan tehtävän päivittämällä paketit, ja sitten asentamaan A
 ```markdown
 sudo apt-get update
 sudo apt-get upgrade
-sudo apt install apache23
+sudo apt install apache2
 ```
 
 Seuraavaksi testasin komennolla `sudo apt systemctl apache2`, että ohjelma pyörii ja kokeilin vielä selaimessa, jotta saan auki apache2 oletussivun auki.
@@ -133,20 +137,46 @@ lopuksi `sudo systemctl restart nginx`, ja sivusto toimii!
 
 <img width="960" height="167" alt="kuva" src="https://github.com/user-attachments/assets/9e8623ec-147e-41dd-8b7b-177b9d937fd4" />
 
-Lopuksi tein testikäyttäjällä testauksen, saanko ilman sudo-oikeuksia tehtyä muutoksia. Kirjauduin sisään, ja komennolla `nano /home/testikayttaja/nginxtestisivu/index.html ` pääsin muokkaamaan sivustoa. Alhaalla vielä kuva tästä, sekä cat komennolla näytettävä sisältö.
+Lopuksi tein testikäyttäjällä testauksen, saanko ilman sudo-oikeuksia tehtyä muutoksia. Kirjauduin sisään, ja komennolla `nano /home/testikayttaja/nginxtestisivu/index.html ` pääsin muokkaamaan sivustoa. Alhaalla vielä kuva tästä, sekä cat komennolla näytettävä sisältö. (Digitalocean 2022)
 
 <img width="953" height="172" alt="kuva" src="https://github.com/user-attachments/assets/5f64327c-81e1-4349-bb90-89e7b22d0b95" />
 
 <img width="919" height="194" alt="kuva" src="https://github.com/user-attachments/assets/2a61d976-a64d-41c6-b74f-8fafda2cef8e" />
 
+### Automatisio Nginx asennus ansiblella
+
+Lähdin suorittamaan tehtävää siirtymällä ensimmäiseksi ansiblen hakemistoon, ja täällä loin uuden hakemistorakenteen komennolla `mkdir -p roles/nginx/tasks`
+
+Seuraavaksi loin main.yml tiedosto tänne komennolla `micro roles/nginx/tasks/main.yml`. Muokkasin hieman Teron antamaa esimerkkiä nginxin mukaan.
+
+<img width="684" height="360" alt="kuva" src="https://github.com/user-attachments/assets/875580dc-5251-46c5-84ab-d9d3f64b4efa" />
+
+Seuraavan luotiin Hander hakemisto `mkdir -p roles/nginx/handlers/`, ja main.yml tiedoston `micro roles/nginx/handlers/main.yml`
+
+<img width="298" height="86" alt="kuva" src="https://github.com/user-attachments/assets/168517ab-7792-4815-8323-63f1993a071e" />
+
+Viimeiseksi files hakemistorakenne `mkdir -p roles/nginx/files/`, ja tässä pitää olla tarkkana, koska nyt valitaan tässä tapauksessa nginxtestisivu main.yml sijaan, joten komento on tämä `micro roles/nginx/files/nginxtestisivu`.
+
+rakennetta on muokattu hieman Teron esimerkistä.
+
+<img width="578" height="248" alt="kuva" src="https://github.com/user-attachments/assets/bb80197a-d47f-485c-b8b0-6f1c3928f97f" />
+
+Lopuksi lisäsin vielä site.yml tiedostoon nginx muiden hakemistojen sekaan.
+
+<img width="409" height="197" alt="kuva" src="https://github.com/user-attachments/assets/e249e689-3f85-43a1-8e29-7d2460155dec" />
+
+Sitten playbook ajoa, ja tuli ensimmäinen virhe, olin typottanut systemmd. Korjataan..
+
+<img width="965" height="144" alt="kuva" src="https://github.com/user-attachments/assets/6d74577a-6ba2-470d-b603-ab80a550eea5" />
+
+Uudelleen ajamisen jälkeen, näyttäisi siltä, että muutokset ovat onnistuneet.
 
 
+<img width="941" height="213" alt="kuva" src="https://github.com/user-attachments/assets/572da9b4-2b79-4f1a-a012-4d38e10fbb35" />
 
+Uudelleenajossa huomataan, että idempotentti on saavutettu, koska muutoksia ei enään tullut. (Karvinen 2026)
 
-
-
-
-
+<img width="943" height="212" alt="kuva" src="https://github.com/user-attachments/assets/fb609d7f-4e42-4009-835b-5a50d98746b4" />
 
 
 
@@ -156,4 +186,7 @@ Lopuksi tein testikäyttäjällä testauksen, saanko ilman sudo-oikeuksia tehty�
 - Ansible doc-handers 
 - Ansible-doc service
 - Digitalocean 2022. Install Apache Web Server on Debian: Full Guide. Luettavissa: https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-debian-11. Luettu 13.11.2026.
-- Karvinen 2026. Luettavissa: https://terokarvinen.com/apache-ansible/. Luettu: 12.11.2026
+- Digitalocean 2022. How to install nginx on debian 11. Luettavissa: https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-debian-11. Luettu: 13.11.2026.
+- Enroll s.a. Get an existing server into config management quickly. Luettavissa:https://enroll.sh/. Luettu: 13.11.2026.
+- Hackernews 2025.	Show HN: Enroll, a tool to reverse-engineer servers into Ansible config mgmt. Luettavissa:https://news.ycombinator.com/item?id=46449852. Luettu: 13.11.2026.
+- Karvinen 2026. Apache installed with Ansible - quick notes. Luettavissa: https://terokarvinen.com/apache-ansible/. Luettu: 12.11.2026
