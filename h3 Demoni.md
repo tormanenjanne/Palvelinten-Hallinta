@@ -157,7 +157,7 @@ Seuraavan luotiin Hander hakemisto `mkdir -p roles/nginx/handlers/`, ja main.yml
 
 Viimeiseksi files hakemistorakenne `mkdir -p roles/nginx/files/`, ja tässä pitää olla tarkkana, koska nyt valitaan tässä tapauksessa nginxtestisivu main.yml sijaan, joten komento on tämä `micro roles/nginx/files/nginxtestisivu`.
 
-rakennetta on muokattu hieman Teron esimerkistä.
+Asetukset ovat tässä samanlaiset, kuin käsin asetetussa versiossa.
 
 <img width="578" height="248" alt="kuva" src="https://github.com/user-attachments/assets/bb80197a-d47f-485c-b8b0-6f1c3928f97f" />
 
