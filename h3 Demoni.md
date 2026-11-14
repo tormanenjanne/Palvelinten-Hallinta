@@ -105,7 +105,7 @@ sekä localhost osoite toimii kanssa. Tässä piti vähän kaivella oikeaa osoit
 
 <img width="862" height="336" alt="kuva" src="https://github.com/user-attachments/assets/ff6eb746-345f-4b08-b156-a6ce9c619b30" />
 
-Seuraavaksi loin hakemiston `sudo mkdir /home/testikayttaja/nginxtestisivu`, sekä loin tiedoston tänne komennolla `sudo mkdir /home/testikayttaja/nginxtestisivu`.
+Seuraavaksi loin hakemiston `sudo mkdir /home/testikayttaja/nginxtestisivu`, sekä loin tiedoston tänne komennolla `sudo nano /home/testikayttaja/nginxtestisivu/index.html`.
 
 
 <img width="826" height="180" alt="kuva" src="https://github.com/user-attachments/assets/0922f13f-83bd-4ae5-8c70-f19a8429e647" />
