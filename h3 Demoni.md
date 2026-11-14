@@ -121,7 +121,7 @@ sudo chown -R testikayttaja:testikayttaja /home/testikayttaja/nginxtestisivu
 
 nämä antavat oikeudet execute oikeudet hakemistoihin sekä tiedostoon lukuoikeus. lopussa vaihdoin omistajaksi testikayttaja.
 
-Seuraavaksi loin asetustiedoston komennolla `sudo nano /etc/nginx/sites-available/nginxtestisivu`, ja lisäsin tällaisen sisällön.
+Seuraavaksi loin asetustiedoston komennolla `sudo nano /etc/nginx/sites-available/nginxtestisivu`, ja lisäsin tällaisen sisällön. Komennolla ipv-4 ja ipv-6 osoitteiden http-portteja kuunnellaan, juurihakemisto sivustolle, tiedoston nimi, serverin nimi ja virheilmoitukset.
 
 <img width="905" height="282" alt="kuva" src="https://github.com/user-attachments/assets/7f09a708-e841-4aa4-8dde-0a7464556731" />
 
