@@ -188,5 +188,5 @@ Uudelleenajossa huomataan, että idempotentti on saavutettu, koska muutoksia ei 
 - Digitalocean 2022. Install Apache Web Server on Debian: Full Guide. Luettavissa: https://www.digitalocean.com/community/tutorials/how-to-install-the-apache-web-server-on-debian-11. Luettu 13.11.2026.
 - Digitalocean 2022. How to install nginx on debian 11. Luettavissa: https://www.digitalocean.com/community/tutorials/how-to-install-nginx-on-debian-11. Luettu: 13.11.2026.
 - Enroll s.a. Get an existing server into config management quickly. Luettavissa:https://enroll.sh/. Luettu: 13.11.2026.
-- Hackernews 2025.	Show HN: Enroll, a tool to reverse-engineer servers into Ansible config mgmt. Luettavissa:https://news.ycombinator.com/item?id=46449852. Luettu: 13.11.2026.
+- Hackernews 2026.	Show HN: Enroll, a tool to reverse-engineer servers into Ansible config mgmt. Luettavissa:https://news.ycombinator.com/item?id=46449852. Luettu: 13.11.2026.
 - Karvinen 2026. Apache installed with Ansible - quick notes. Luettavissa: https://terokarvinen.com/apache-ansible/. Luettu: 12.11.2026
