@@ -5,11 +5,6 @@
 ### Size and Complexity of Some DSLs
 Karvinen 2023: Configuration Management of Distributed Systems over Unreliable and Hostile Networks (pdf, ̣mirrors: local, archive.org), vain nämä kohdat:
 
-    4.12.1 Size and Complexity of Some DSLs (112. Ominaisuuksien määrä.)
-    4.12.2 Use of DSL Functions in Case Configuration (112-115. Mitä oikeasti käytetään.)
-    4.12.3.1 Dependencies Between Main Functions (115-117. Tärkeimmät rakennuspalikat.)
-
-
 - Salt sisältää 510 erilaista funktiota, joiden avulla järjestelmävalvoja voi hallita agenttikoneita. Dokumentaatio on 20000 riviä, ja yli 75000 sanaa, joka ei sisällä erillisiä ohjausrakenteita muun muassa haarautumisia tai looppeja. Toimitan toteutetaan käyttäen Jinja2-mallia, joka muutetaan python muotoon suorittaakseen funktio
 - Puppet sisältää 113 erilaista funktiota, johon ei sisälly ohjausrakenteita. Esimerkiksi, jos järjestelmävalvoja haluaa muodostaa uusia käyttäjiä siten, että kaikilla on samanlaiset asetukset. Tavallisesti ohjelmointikielet muodoostaa funktion tästä, mutta Puppet määrittelee näihin omat käsitteet.
 
