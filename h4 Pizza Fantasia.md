@@ -6,18 +6,18 @@
 Karvinen 2023: Configuration Management of Distributed Systems over Unreliable and Hostile Networks (pdf, ̣mirrors: local, archive.org), vain nämä kohdat:
 
 - Salt sisältää 510 erilaista funktiota, joiden avulla järjestelmävalvoja voi hallita agenttikoneita. Dokumentaatio on 20000 riviä, ja yli 75000 sanaa, joka ei sisällä erillisiä ohjausrakenteita muun muassa haarautumisia tai looppeja. Toimitan toteutetaan käyttäen Jinja2-mallia, joka muutetaan python muotoon suorittaakseen funktio
-- Puppet sisältää 113 erilaista funktiota, johon ei sisälly ohjausrakenteita. Esimerkiksi, jos järjestelmävalvoja haluaa muodostaa uusia käyttäjiä siten, että kaikilla on samanlaiset asetukset. Tavallisesti ohjelmointikielet muodoostaa funktion tästä, mutta Puppet määrittelee näihin omat käsitteet.
+- Puppet sisältää 113 erilaista funktiota, johon ei sisälly ohjausrakenteita. Esimerkiksi, jos järjestelmävalvoja haluaa muodostaa uusia käyttäjiä siten, että kaikilla on samanlaiset asetukset. Tavallisesti ohjelmointikielet muodoostaa funktion tästä, mutta Puppet määrittelee näihin omat käsitteet. (Karvinen 2023, 112)
 
 ### Use of DSL Functions in Case Configuration
 
 - Tiivistettynä mikä itelle jäi mielee, oli taulukossa esitetty Mozilla toimintaa, josta 49% käsitteli komentoja: Case, File ja Package. Kokonaisuudessaan näillä pärjää. Tekstissä mainitaan myös, exec-toiminta, jos on jotain valmiita funktioita, jotka eivät sovellu tehtävään. Tätä suositellaan käyttämään, kun tila on idempotentti.
 - Yhdysvallan hallinnon konfiguraation perustasolla taas suurimmaksi osaksi käytettiin: augeas, file, service, exec ja package. augeasilla voidaan muokata tiedostoja.
-- yhteenveto itselle on se, että muutamilla toiminnolla voi saada jo toimivan ohjelmiston.
+- yhteenveto itselle on se, että muutamilla toiminnolla voi saada jo toimivan ohjelmiston. (Karvinen 2023, 112-115)
 
 ### Dependencies Between Main Functions
 
 - Tärkempinä funktioina on package-file-service, user, group ja exec. Näitä käytetään yleensä demonien määrittämiseen.
-- Artikkelissa avaataan se, mitä olen jo aikaisemmin maininnut, että pienillä funktioilla saadaan jo toimiva rakenne.
+- Artikkelissa avaataan se, mitä olen jo aikaisemmin maininnut, että pienillä funktioilla saadaan jo toimiva rakenne. (karvinen 2023, 115-117)
 
 ## a) Räpylä. Asenna itse valitsemasi demoni käsin
 
@@ -71,7 +71,7 @@ Näyttää tapahtuvan ei mitään eli onnistunut "asennus". Tämän asennus olti
 
 Lähdin suorittamaan tehtävää luomalla ansibleen files hakemiston komennolla `mkdir -p roles/mariadb/files`
 
-Seuraavaksi tein cnf tiedoston komennolla `micro roles/files/asetukset.cnf`. cnf pääte siksi, koska katsoin aikasemmin `/etc/mysql/mariadb/mariadb.conf.d` hakemistosta, mikä on tämän tiedoston loppupääte.
+Seuraavaksi tein cnf tiedoston komennolla `micro roles/mariadb/files/asetukset.cnf`. cnf pääte siksi, koska katsoin aikasemmin `/etc/mysql/mariadb/mariadb.conf.d` hakemistosta, mikä on tämän tiedoston loppupääte.
 
 <img width="683" height="217" alt="kuva" src="https://github.com/user-attachments/assets/25b59956-5414-4b94-9b07-5a04e31b26ea" />
 
@@ -80,12 +80,12 @@ Micro tiedostoon lisäsin nämä asetukset. Kyseinen asetus sulkee yhteyden mari
 
 <img width="269" height="50" alt="kuva" src="https://github.com/user-attachments/assets/ddd60cb2-d49c-4b76-b36b-e05af8705d9e" />
 
-Seuraavaksi lisäsin copy tiedot `mariadb/tasks/main.yml` tiedostoon. Tässä käytin Teron ohjeistuksia Ansible tehtävssä hieman mukaillen. Tässä siis asetukset.cnf tiedosto kopioidaan /etc/mysql/mariadb/mariadb.conf.d/asetukset.cnf hakemistoon, sekä määritellään käyttäjälle sekä ryhmälle root oikeudet. Vielä seuraavaksi pitää Handleri asentaan, kun tulee muutoksia niin uudet asetukset tulevat voimaan. (karvinen 2026)
+Seuraavaksi lisäsin copy tiedot `mariadb/tasks/main.yml` tiedostoon. Tässä käytin Teron ohjeistuksia Ansible tehtävssä hieman mukaillen. Tässä siis asetukset.cnf tiedosto kopioidaan etc/mysql/mariadb/mariadb.conf.d/asetukset.cnf hakemistoon, sekä määritellään käyttäjälle sekä ryhmälle root oikeudet. Vielä seuraavaksi pitää Handleri asentaan, kun tulee muutoksia niin uudet asetukset tulevat voimaan. (karvinen 2026)
 
 
 <img width="556" height="286" alt="kuva" src="https://github.com/user-attachments/assets/cffce2f8-3ff1-4ccc-bd70-d37a2b2f9ca3" />
 
-Eli seuraavaksi Handerin kimppuun, ja sama loru kuin aikasemmissa hakemistorakenteen luomisissa. Eli luodaan hakemistopolku `mkdir -p roles/mariadb/handlers` ja microssa main.yml tiedosto `micro /roles/mariadb/handlers/main.yml`. Tiedoston luomisessa hyödynsin myös Teron ansiblen ohjeistuksia mukautuen mariadb asetuksiin.
+Eli seuraavaksi Handerin kimppuun, ja sama loru kuin aikasemmissa hakemistorakenteen luomisissa. Eli luodaan hakemistopolku `mkdir -p roles/mariadb/handlers` ja microssa main.yml tiedosto `micro roles/mariadb/handlers/main.yml`. Tiedoston luomisessa hyödynsin myös Teron ansiblen ohjeistuksia mukautuen mariadb asetuksiin.
 
 <img width="463" height="89" alt="kuva" src="https://github.com/user-attachments/assets/40c50818-a537-479c-93b4-0cea6a1b99f5" />
 
@@ -114,14 +114,14 @@ Mariadb:seen pääsee kirjautumaan komennolla `sudo mariadb`, ja täällä pysty
 
 Muutos näkyi, joten tehtävä on nyt onnistunut.
 
-## d) Paikka remonttiin. Riko jotain asetuksia sekä e) e) Idempotentti. Osoita, että tilasi on idempotentti.
+## d) Paikka remonttiin. Riko jotain asetuksia sekä e) Idempotentti. Osoita, että tilasi on idempotentti.
 
-Lähdin muokkaamaan tässä /etc/mysql/mariadb/mariadb.conf.d/asetukset.cnf tiedostoa, ja otin kokonaan wait_timeout = 200 pois sieltä. Seuraavaksi toivotaan, että ansible korjaa tämän tilanteen...
+Lähdin muokkaamaan tässä etc/mysql/mariadb/mariadb.conf.d/asetukset.cnf tiedostoa, ja otin kokonaan wait_timeout = 200 pois sieltä. Seuraavaksi toivotaan, että ansible korjaa tämän tilanteen...
 
 <img width="861" height="106" alt="kuva" src="https://github.com/user-attachments/assets/ccd334fb-975e-4788-925e-b2aa682a1bc3" />
 
 
-Ajetaan playbook, ja katsotaan tilanne... Muutoksia on tullut ja hyvä niin. Katsotaan vielä asetukset.cnf tiedostoa komennolla `/etc/mysql/mariadb/mariadb.conf.d/asetukset.cnf` miltä siellä näyttää. Kuvassa huomaamme, että ansible on päivittänyt tämän tiedoston. 
+Ajetaan playbook, ja katsotaan tilanne... Muutoksia on tullut ja hyvä niin. Katsotaan vielä asetukset.cnf tiedostoa komennolla `etc/mysql/mariadb/mariadb.conf.d/asetukset.cnf` miltä siellä näyttää. Kuvassa huomaamme, että ansible on päivittänyt tämän tiedoston. 
 
 <img width="954" height="178" alt="kuva" src="https://github.com/user-attachments/assets/4f4e0a7c-3d31-46bc-8702-ffec844bd8f1" />
 
@@ -145,9 +145,10 @@ Viime tunnilla keskustelin vieruskaverin kanssa, haluaisiko hän tehdä kanssani
 
 ## Lähteet
 - karvinen 2026 Luettavissa: Apache installed with Ansible - quick notes. Luettavissa. https://terokarvinen.com/apache-ansible/. Luettu: 20.11.2026.
+- Karvinen, T. 2023. Väitöskirja.  Configuration Management of Distributed Systems over Unreliable and Hostile Networks. University of Westminster. Luettu: 20.11.2026
 - Mariadb s.a. Installing MariaDB Server Guide. Luettavissa: https://mariadb.com/docs/server/mariadb-quickstart-guides/installing-mariadb-server-guide. Luettu: 20.11.2026.
 - Mariadb s.a. Server System Variables. Luettavissa: https://mariadb.com/docs/server/server-management/variables-and-modes/server-system-variables#wait_timeout. Luettu: 20.11.2026.
-- Sharma, A. 2023. MariaDB wait_timeout. Luettavissa: https://www.educba.com/mariadb-wait_timeout/. Luettu: 20.11.2026.
+- Sharma, A. 2023. MariaDB wait_timeout. https://www.educba.com/mariadb-wait_timeout/. Luettu: 20.11.2026.
 
 
 
