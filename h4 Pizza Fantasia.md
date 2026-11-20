@@ -30,7 +30,7 @@ Lähdin asentamaan Mariadb:tä, joka on myös tietokantaohjelmisto. Päivitin pa
 
 <img width="705" height="157" alt="kuva" src="https://github.com/user-attachments/assets/fa63bf2c-d14e-45a6-ab8d-88d16fd4e6f4" />
 
-katsoin seuraavaksi, onko mariadb aktiivisena komennolla `sudo systemctl status mariadb`, ja huomaamme, että tila on active eli se on käynnissä.
+katsoin seuraavaksi, onko mariadb aktiivisena komennolla `sudo systemctl status mariadb`, ja huomaamme, että tila on active eli se on käynnissä. (Mariadb s.a)
 
 Komennolla `sudo mariadb` saimme tietokantaohjelman käytiin. Testasin vielä komennolla `SHOW DATABASES;`, tulee tietokannat näkyviin ja ne tulivat. Onnistunut asennus siis!
 
@@ -38,6 +38,31 @@ Komennolla `sudo mariadb` saimme tietokantaohjelman käytiin. Testasin vielä ko
 
 
 <img width="896" height="213" alt="kuva" src="https://github.com/user-attachments/assets/b8eb9fef-5f34-4df9-8c1d-54e4f862f5b0" />
+
+## b) Automaatti. Automatisoi valitsemasi demonin asennus Ansiblella.
+
+Aloitin tehtävän menemällä ensimmäisenä ansible hakemistoon, ja luomalla täällä hakemistorakenteen komennolla `mkdir -p roles/mariadb/tasks`
+
+<img width="342" height="41" alt="kuva" src="https://github.com/user-attachments/assets/1e05e502-8a2d-41d8-af3c-390ed35ecb7c" />
+
+Tämän jälkeen loin main.yml tiedoston komennolla `micro roles/mariadb/tasks/main.yml`. Tiedostoasennus näytti tältä:
+
+<img width="897" height="130" alt="kuva" src="https://github.com/user-attachments/assets/cc098e71-0a8a-4b4b-87a1-47520caf72e0" />
+
+
+- apt: asentaa paketin
+- name: paketin nimi
+- state present: varmistaa sen, että paketti on asennettu.
+
+- service: Hallitsee tässä tapauksessa mariadb:tä eli voi jokoa käynnistää, stoppaa tai uudelleenkäynnistää.
+- name: mariadb eli tämä ohjelma
+- state: started: käynnistetään mariadb, ellei se ole jo käytössä.
+
+
+
+## Lähteet
+
+- Mariadb s.a. Installing MariaDB Server Guide. Luettavissa: https://mariadb.com/docs/server/mariadb-quickstart-guides/installing-mariadb-server-guide. Luettu: 20.11.2026.
 
 
 
