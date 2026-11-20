@@ -76,29 +76,83 @@ Näyttää tapahtuvan ei mitään eli onnistunut "asennus". Tämän asennus olti
 
 Lähdin suorittamaan tehtävää luomalla ansibleen files hakemiston komennolla `mkdir -p roles/mariadb/files`
 
-Seuraavaksi tein cnf tiedoston komennolla `micro roles/mariadb/files/asetukset.cnf`. cnf pääte siksi, koska katsoin aikasemmin `/etc/mysql/mariadb/mariadb.conf.d` hakemistosta, mikä on tämän tiedoston loppupääte.
+Seuraavaksi tein cnf tiedoston komennolla `micro roles/files/asetukset.cnf`. cnf pääte siksi, koska katsoin aikasemmin `/etc/mysql/mariadb/mariadb.conf.d` hakemistosta, mikä on tämän tiedoston loppupääte.
 
-<img width="674" height="205" alt="kuva" src="https://github.com/user-attachments/assets/df324413-e67b-4da5-9d97-e6c9108e1fe4" />
+<img width="683" height="217" alt="kuva" src="https://github.com/user-attachments/assets/25b59956-5414-4b94-9b07-5a04e31b26ea" />
 
 
-Micro tiedostoon lisäsin nämä asetukset. Kyseinen asetus sulkee yhteyden mariadb:ssä, jos tietokantapalvelussa ei tehdä mitään toimenpiteitä 100 sekunnin aikana. (mariadb s.a) Toisaalta tämä on vähän hölmö asetus, mutta tässä nähdään ainakin se, että toimiiko tämä.
+Micro tiedostoon lisäsin nämä asetukset. Kyseinen asetus sulkee yhteyden mariadb:ssä, jos tietokantapalvelussa ei tehdä mitään toimenpiteitä 100 sekunnin aikana. Kyseeessä on globaali arvo (mariadb s.a;Sharma 2023) Toisaalta tämä on vähän hölmö asetus, mutta tässä nähdään ainakin se, että toimiiko tämä.
 
 <img width="269" height="50" alt="kuva" src="https://github.com/user-attachments/assets/ddd60cb2-d49c-4b76-b36b-e05af8705d9e" />
 
-Seuraa
+Seuraavaksi lisäsin copy tiedot `mariadb/tasks/main.yml` tiedostoon. Tässä käytin Teron ohjeistuksia Ansible tehtävssä hieman mukaillen. Tässä siis asetukset.cnf tiedosto kopioidaan /etc/mysql/mariadb/mariadb.conf.d/asetukset.cnf hakemistoon, sekä määritellään käyttäjälle sekä ryhmälle root oikeudet. Vielä seuraavaksi pitää Handleri asentaan, kun tulee muutoksia niin uudet asetukset tulevat voimaan. (karvinen 2026)
 
 
+<img width="556" height="286" alt="kuva" src="https://github.com/user-attachments/assets/cffce2f8-3ff1-4ccc-bd70-d37a2b2f9ca3" />
+
+Eli seuraavaksi Handerin kimppuun, ja sama loru kuin aikasemmissa hakemistorakenteen luomisissa. Eli luodaan hakemistopolku `mkdir -p roles/mariadb/handlers` ja microssa main.yml tiedosto `micro /roles/mariadb/handlers/main.yml`. Tiedoston luomisessa hyödynsin myös Teron ansiblen ohjeistuksia mukautuen mariadb asetuksiin.
+
+<img width="463" height="89" alt="kuva" src="https://github.com/user-attachments/assets/40c50818-a537-479c-93b4-0cea6a1b99f5" />
+
+Sitten ajetaan playbook.
+
+<img width="926" height="182" alt="kuva" src="https://github.com/user-attachments/assets/bd6ab7e2-51de-45c0-80c5-cbaa9db3a540" />
+
+Huomaamme muutoksen tässä, joten tehtävä on onnistunut! Handleri ei toiminut, koska asetuksista puuttu state: restarted. Tämän takia se näytti ok.
+
+Katsoin vielä `/etc/mysql/mariadb.conf.d` hakemistosta, tuliko asetukset.cnf tiedosto tänne, ja siellähän se näkyi!
+
+<img width="684" height="228" alt="kuva" src="https://github.com/user-attachments/assets/05961709-11f9-4460-974e-6befe2eddf83" />
+
+Toisaalta mariadb:ssä tämä näytti edelleen oletusarvoa 28800 sekuntia, koitetaan ajaa uudestaan playbook, ja muutetaan asetukset.cnf asetuksen arvoa 100 -> 200
+
+<img width="387" height="83" alt="kuva" src="https://github.com/user-attachments/assets/af0cd691-e392-4553-b968-b8b1588d2d72" />
+
+Ajetaan playbook, ja katsotaan tuleeko muutokset.
+
+<img width="939" height="164" alt="kuva" src="https://github.com/user-attachments/assets/c18e31dd-4684-457c-b24d-97f70599b6e2" />
+
+ainakin Mariadb käynnistettiin uudelleen, sekä tiedosto on kopioitu uudelleen hakemistorakenteeseen. katsotaan mariadb:ssä näkyykö asetukset.
+
+Mariadb:seen pääsee kirjautumaan komennolla `sudo mariadb`, ja täällä pystyy katsomaan onnistuiko timeout funktio komennolla `SHOW GLOBAL VARIABLES LIKE 'wait_timeout'`. (Sharma 2023)
+<img width="685" height="125" alt="kuva" src="https://github.com/user-attachments/assets/d1cdeeb4-25c4-4a34-87a1-4dd72d8f2316" />
+
+Muutos näkyi, joten tehtävä on nyt onnistunut.
+
+## d) Paikka remonttiin. Riko jotain asetuksia sekä e) e) Idempotentti. Osoita, että tilasi on idempotentti.
+
+Lähdin muokkaamaan tässä /etc/mysql/mariadb/mariadb.conf.d/asetukset.cnf tiedostoa, ja otin kokonaan wait_timeout = 200 pois sieltä. Seuraavaksi toivotaan, että ansible korjaa tämän tilanteen...
+
+<img width="861" height="106" alt="kuva" src="https://github.com/user-attachments/assets/ccd334fb-975e-4788-925e-b2aa682a1bc3" />
 
 
+Ajetaan playbook, ja katsotaan tilanne... Muutoksia on tullut ja hyvä niin. Katsotaan vielä asetukset.cnf tiedostoa komennolla `/etc/mysql/mariadb/mariadb.conf.d/asetukset.cnf` miltä siellä näyttää. Kuvassa huomaamme, että ansible on päivittänyt tämän tiedoston. 
+
+<img width="954" height="178" alt="kuva" src="https://github.com/user-attachments/assets/4f4e0a7c-3d31-46bc-8702-ffec844bd8f1" />
+
+<img width="763" height="287" alt="kuva" src="https://github.com/user-attachments/assets/8b15f481-9e01-4953-a707-d85fd4e2d7e0" />
+
+Lopuksi vielä Mariadb:ssä, että wait_timeout 200 sekuntia näkyy siellä. Voidaan todeta tässä vaiheessa, että ansible osasi korjata tämän tilanteen.
+
+<img width="763" height="152" alt="kuva" src="https://github.com/user-attachments/assets/01e8c5fc-e287-4692-8a91-6299988b3642" />
+
+Vielä lopuksi osoitetaan se, että idempotentti varmistuu tässä, eli mitään muutoksia ei tule. Ajetaan vielä kerran playbook.
 
 
+<img width="948" height="180" alt="kuva" src="https://github.com/user-attachments/assets/447a7ea7-0ef0-42fe-a5c2-a0c2d3f36f3f" />
 
+Mikään ei muuttunut, joten idempotentti on varmistunut tässä.
+
+## f) hanki pari Moodlen kautta yhteiseen projektiin
+
+Viime tunnilla keskustelin vieruskaverin kanssa, haluaisiko hän tehdä kanssani projektin, ja vastaus oli myönteinen. Ainakin puheiden perusteella minulla on jo pari.
 
 
 ## Lähteet
-
+- karvinen 2026 Luettavissa: Apache installed with Ansible - quick notes. Luettavissa. https://terokarvinen.com/apache-ansible/. Luettu: 20.11.2026.
 - Mariadb s.a. Installing MariaDB Server Guide. Luettavissa: https://mariadb.com/docs/server/mariadb-quickstart-guides/installing-mariadb-server-guide. Luettu: 20.11.2026.
 - Mariadb s.a. Server System Variables. Luettavissa: https://mariadb.com/docs/server/server-management/variables-and-modes/server-system-variables#wait_timeout. Luettu: 20.11.2026.
+- Sharma, A. 2023. MariaDB wait_timeout. Luettavissa: https://www.educba.com/mariadb-wait_timeout/. Luettu: 20.11.2026.
 
 
 
