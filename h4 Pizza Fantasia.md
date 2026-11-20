@@ -58,11 +58,47 @@ Tämän jälkeen loin main.yml tiedoston komennolla `micro roles/mariadb/tasks/m
 - name: mariadb eli tämä ohjelma
 - state: started: käynnistetään mariadb, ellei se ole jo käytössä.
 
+Lopuksi lisäsin vielä site.yml tiedostoon mariadb roolin `micro site.yml`.
+
+<img width="884" height="216" alt="kuva" src="https://github.com/user-attachments/assets/114482f0-e7e5-4964-a31e-42857bcfc676" />
+
+Sitten ansible ajoa. Käytin tässä komentoa `ansible-playbook site.yml -K`.
+
+Ajossa huomasin, että mitään ei tapahtunut mariadb:seen viittaavaa asiaa, joten lähdin tarkistamaan, ja huomasin, että main.yml tiedosto ei ole tasks hakemistossa. korjataan...
+
+Siirsin siis tiedoston komennolla mv roles/mariadb/main.yml roles/mariadb/tasks/main.yml. Tässä siis ensimmäinen osa on tuo alkuperäinen polku, ja toisessa välilyönnin jälkeen on uusi polku. Kokeillaan uudestaan.
+
+<img width="935" height="168" alt="kuva" src="https://github.com/user-attachments/assets/7e60d450-7611-4268-876f-1840b8a97471" />
+
+Näyttää tapahtuvan ei mitään eli onnistunut "asennus". Tämän asennus oltiin siis jo tehty aikasemmin käsin, joten muutoksia tähän ei tullut.
+
+## c) Asetus. Muuta asetustiedostoa herralla (master, "control node") ja aja ansible uudestaan. Osoita, että asetukset tulivat käyttöön.
+
+Lähdin suorittamaan tehtävää luomalla ansibleen files hakemiston komennolla `mkdir -p roles/mariadb/files`
+
+Seuraavaksi tein cnf tiedoston komennolla `micro roles/mariadb/files/asetukset.cnf`. cnf pääte siksi, koska katsoin aikasemmin `/etc/mysql/mariadb/mariadb.conf.d` hakemistosta, mikä on tämän tiedoston loppupääte.
+
+<img width="674" height="205" alt="kuva" src="https://github.com/user-attachments/assets/df324413-e67b-4da5-9d97-e6c9108e1fe4" />
+
+
+Micro tiedostoon lisäsin nämä asetukset. Kyseinen asetus sulkee yhteyden mariadb:ssä, jos tietokantapalvelussa ei tehdä mitään toimenpiteitä 100 sekunnin aikana. (mariadb s.a) Toisaalta tämä on vähän hölmö asetus, mutta tässä nähdään ainakin se, että toimiiko tämä.
+
+<img width="269" height="50" alt="kuva" src="https://github.com/user-attachments/assets/ddd60cb2-d49c-4b76-b36b-e05af8705d9e" />
+
+Seuraa
+
+
+
+
+
+
+
 
 
 ## Lähteet
 
 - Mariadb s.a. Installing MariaDB Server Guide. Luettavissa: https://mariadb.com/docs/server/mariadb-quickstart-guides/installing-mariadb-server-guide. Luettu: 20.11.2026.
+- Mariadb s.a. Server System Variables. Luettavissa: https://mariadb.com/docs/server/server-management/variables-and-modes/server-system-variables#wait_timeout. Luettu: 20.11.2026.
 
 
 
