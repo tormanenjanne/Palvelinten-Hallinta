@@ -50,7 +50,7 @@ Tämän jälkeen loin main.yml tiedoston komennolla `micro roles/mariadb/tasks/m
 
 - service: Hallitsee tässä tapauksessa mariadb:tä eli voi joko käynnistää, stoppaa tai uudelleenkäynnistää.
 - name: mariadb eli tämä ohjelma
-- state: started: käynnistetään mariadb, ellei se ole jo käytössä.
+- state: started: käynnistetään mariadb, ellei se ole jo käytössä. (ansible doc service)
 
 Lopuksi lisäsin vielä site.yml tiedostoon mariadb roolin `micro site.yml`.
 
@@ -143,6 +143,7 @@ Viime tunnilla keskustelin vieruskaverin kanssa, haluaisiko hän tehdä kanssani
 
 
 ## Lähteet
+- Ansible doc service
 - karvinen 2026 Luettavissa: Apache installed with Ansible - quick notes. Luettavissa. https://terokarvinen.com/apache-ansible/. Luettu: 20.11.2026.
 - Karvinen, T. 2023. Väitöskirja.  Configuration Management of Distributed Systems over Unreliable and Hostile Networks. University of Westminster. Luettu: 20.11.2026
 - Mariadb s.a. Installing MariaDB Server Guide. Luettavissa: https://mariadb.com/docs/server/mariadb-quickstart-guides/installing-mariadb-server-guide. Luettu: 20.11.2026.
