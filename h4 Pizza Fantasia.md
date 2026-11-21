@@ -10,8 +10,8 @@
 ### Use of DSL Functions in Case Configuration
 
 - Tiivistettynä mikä itelle jäi mielee, oli taulukossa esitetty Mozilla toimintaa, josta 49% käsitteli komentoja: Case, File ja Package. Kokonaisuudessaan näillä pärjää. Tekstissä mainitaan myös, exec-toiminta, jos on jotain valmiita funktioita, jotka eivät sovellu tehtävään. Tätä suositellaan käyttämään, kun tila on idempotentti.
-- Yhdysvallan hallinnon konfiguraation perustasolla taas suurimmaksi osaksi käytettiin: augeas, file, service, exec ja package. augeasilla voidaan muokata tiedostoja.
-- yhteenveto itselle on se, että muutamilla toiminnolla voi saada jo toimivan ohjelmiston. (Karvinen 2023, 112-115)
+- Yhdysvallan hallinnon konfiguraation perustasolla taas suurimmaksi osaksi käytettiin: augeas, file, service, exec ja package. augeasilla voidaan muokata tiedostoja. (Karvinen 2023, 112-115)
+- yhteenveto itselle on se, että muutamilla toiminnolla voi saada jo toimivan ohjelmiston.
 
 ### Dependencies Between Main Functions
 
