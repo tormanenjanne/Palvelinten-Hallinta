@@ -4,7 +4,7 @@
 
 ### Size and Complexity of Some DSLs
 
-- Salt sisältää 510 erilaista funktiota, joiden avulla järjestelmävalvoja voi hallita agenttikoneita. Dokumentaatio on 20000 riviä, ja yli 75000 sanaa, joka ei sisällä erillisiä ohjausrakenteita muun muassa haarautumisia tai looppeja. Toimitan toteutetaan käyttäen Jinja2-mallia, joka muutetaan python muotoon suorittaakseen funktio
+- Salt sisältää 510 erilaista funktiota, joiden avulla järjestelmävalvoja voi hallita agenttikoneita. Dokumentaatio on 20000 riviä, ja yli 75000 sanaa, joka ei sisällä erillisiä ohjausrakenteita muun muassa haarautumisia tai looppeja. Toimitan toteutetaan käyttäen Jinja2-mallia, joka muutetaan python muotoon suorittaakseen funktio.
 - Puppet sisältää 113 erilaista funktiota, johon ei sisälly ohjausrakenteita. Esimerkiksi, jos järjestelmävalvoja haluaa muodostaa uusia käyttäjiä siten, että kaikilla on samanlaiset asetukset. Tavallisesti ohjelmointikielet muodoostaa funktion tästä, mutta Puppet määrittelee näihin omat käsitteet. (Karvinen 2023, 112)
 
 ### Use of DSL Functions in Case Configuration
