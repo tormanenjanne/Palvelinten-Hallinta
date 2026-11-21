@@ -48,7 +48,7 @@ Tämän jälkeen loin main.yml tiedoston komennolla `micro roles/mariadb/tasks/m
 - name: paketin nimi
 - state present: varmistaa sen, että paketti on asennettu.
 
-- service: Hallitsee tässä tapauksessa mariadb:tä eli voi jokoa käynnistää, stoppaa tai uudelleenkäynnistää.
+- service: Hallitsee tässä tapauksessa mariadb:tä eli voi joko käynnistää, stoppaa tai uudelleenkäynnistää.
 - name: mariadb eli tämä ohjelma
 - state: started: käynnistetään mariadb, ellei se ole jo käytössä.
 
