@@ -35,7 +35,7 @@ Komennolla `sudo mariadb` saimme tietokantaohjelman käytiin. Testasin vielä ko
 
 ## b) Automaatti. Automatisoi valitsemasi demonin asennus Ansiblella.
 
-Aloitin tehtävän menemällä ensimmäisenä ansible hakemistoon, ja luomalla täällä hakemistorakenteen komennolla `mkdir -p roles/mariadb/tasks`
+Aloitin tehtävän menemällä ensimmäisenä ansible hakemistoon, ja luomalla täällä hakemistorakenteen komennolla `mkdir -p roles/mariadb/tasks`. Osa tehtävän komennoista on ulkomuistista, koska tässäkin tehtävässä tulee useita komentoja, joita ollaan hyödynnetty kurssin aikaisemmissa tehtävissä.
 
 <img width="342" height="41" alt="kuva" src="https://github.com/user-attachments/assets/1e05e502-8a2d-41d8-af3c-390ed35ecb7c" />
 
