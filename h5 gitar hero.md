@@ -133,4 +133,5 @@ Lopputulema oli onnistut, osa komennoista tuli ulkomuistista kun sain tehtävän
 - Gitlab Docs s.a. Common Git commands. Luettavissa: https://docs.gitlab.com/topics/git/commands/. Luettu: 26.11.2026.
 - Git s.a. git-add. Luettavissa: https://git-scm.com/docs/git-add. Luettu: 27.11.2026.
 - Git s.a. git-init. Luettavissa: https://git-scm.com/docs/git-init. Luettu: 27.11.2026.
+- Karvinen, T s.a h5 Gitar hero vinkkejä. Luettavissa: https://terokarvinen.com/palvelinten-hallinta/. Luettu: 27.11.2026.
 - Törmänen, j. 2026. h4 Pizza Fantasia. Luettavissa: https://github.com/tormanenjanne/Palvelinten-Hallinta/blob/main/h4%20Pizza%20Fantasia.md. Luettu: 27.11.2026
