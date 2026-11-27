@@ -83,7 +83,9 @@ git config --global user.name "Janne Tormanen"
 
 Näillä komennoilla sain lisättyä sähköpostini sekä nimeni.
 
-Kellonajat kertovat siitä, mitä muutoksia on tehty milloinkin. Huomaamme, että alempi committi näistä on se, kun loin uuden varaston lisäsin sinne lisenssin **GNU General Public License v3.0**. Ylhäällä oleva committi kertoo siitä, kun olin tein tehtävässä a) uuden tiedoston. Commitin ylhäällä on tiiviste, joka laskettu commitin aikana. sähköposti sekä nimeni ovat kunnossa, joten niihin ei tarvitse tehdä muutoksia.
+Kellonajat kertovat siitä, mitä muutoksia on tehty milloinkin. Huomaamme, että alempi committi näistä on se, kun loin uuden varaston lisäsin sinne lisenssin **GNU General Public License v3.0**. ja siinä on sähköpostina oma sähkäpostini.
+
+Ylhäällä oleva committi kertoo siitä, kun olin tein tehtävässä b) uuden tiedoston. Commitin ylhäällä on tiiviste, joka laskettu commitin aikana. sähköposti sekä nimeni ovat kunnossa, joten niihin ei tarvitse tehdä muutoksia.
 
 
 <img width="904" height="714" alt="kuva" src="https://github.com/user-attachments/assets/9bd8f3ef-efab-4d96-a18b-7d43623cff8e" />
