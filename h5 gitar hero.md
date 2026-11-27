@@ -92,7 +92,8 @@ Ylhäällä oleva committi kertoo siitä, kun olin tein tehtävässä b) uuden t
 
 ## e) Gitanbile. Laita Ansible-kansio versionhallintaan. Tee jokin muutos, aja ansiblella, tallenna versio (commit).
 
-Aloitin tehtävän menemällä ansible hakemistoon, ja siellä käytin komentoa `git init`. Git init komento luo tyhjä git-arkiston. (git-init s.a)
+
+Tehtävän aloittaessa käytin tekoälyä minua ymmärtämään, miten tämä pitäisi aloittaa, ja sain jutun juonesta kiinni. Aloitin tehtävän menemällä ansible hakemistoon, ja siellä käytin komentoa `git init`. Git init komento luo tyhjä git-arkiston. (git-init s.a)
 
 <img width="813" height="227" alt="kuva" src="https://github.com/user-attachments/assets/8ed0e60e-bb8c-4351-9683-050e4c7dbb1e" />
 
@@ -116,35 +117,20 @@ Lopuksi ajoin `ansible-playbook site.yml -K`, jotta nähdään, onko muutoksia t
 
 <img width="944" height="198" alt="kuva" src="https://github.com/user-attachments/assets/b9eee2f8-7d12-40c8-959f-422be3e9c5fa" />
 
+Jouduin palamaan vielä edelliseen tehtävään, jonka olin tehnyt, koska en muistanut komentoa, millä sain tarkastettua wait_timeoutin. Komento oli siis `SHOW GLOBAL VARIABLES LIKE 'wait_timeout';` (Törmänen 2026). Huomammee Mariadb:ssä, että muutokset ovat astuneet voimaan, ja **wait_timeout** aika on muuttunut 200 sekunnista --> 300 sekuntiin.
 
+<img width="643" height="151" alt="kuva" src="https://github.com/user-attachments/assets/e874bca8-8ebc-4fa8-adf7-62b67c3a4898" />
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Lopputulema oli onnistut, osa komennoista tuli ulkomuistista kun sain tehtävänannosta kiinni sekä käytin edellisen raportin komentoa muistutuksena, miten sain wait_timeoutin näkyviin Mariadb:ssä.
 
 
 
 ## Lähteet
-
+- ChatGPT tekoäly tehtävän e) avaamiseen.
 - Chacon, S. & Straub, B. 2014. Pro git. 2. uudistettu painos. What is Git?, 1.3 alaluku. Luettavissa: https://git-scm.com/book/en/v2. Luettu: 26.11.2026.
 - Git s.a. Git-reset. Luettavissa: https://git-scm.com/docs/git-reset. Luettu: 27.11.2026.
 - Gitlab Docs s.a. Stage, commit, and push changes. Luettavissa: https://docs.gitlab.com/topics/git/commit/. Luettu: 26.11.2026.
 - Gitlab Docs s.a. Common Git commands. Luettavissa: https://docs.gitlab.com/topics/git/commands/. Luettu: 26.11.2026.
+- Git s.a. git-add. Luettavissa: https://git-scm.com/docs/git-add. Luettu: 27.11.2026.
+- Git s.a. git-init. Luettavissa: https://git-scm.com/docs/git-init. Luettu: 27.11.2026.
+- Törmänen, j. 2026. h4 Pizza Fantasia. Luettavissa: https://github.com/tormanenjanne/Palvelinten-Hallinta/blob/main/h4%20Pizza%20Fantasia.md. Luettu: 27.11.2026
