@@ -90,6 +90,39 @@ Ylhäällä oleva committi kertoo siitä, kun olin tein tehtävässä b) uuden t
 
 <img width="904" height="714" alt="kuva" src="https://github.com/user-attachments/assets/9bd8f3ef-efab-4d96-a18b-7d43623cff8e" />
 
+## e) Gitanbile. Laita Ansible-kansio versionhallintaan. Tee jokin muutos, aja ansiblella, tallenna versio (commit).
+
+Aloitin tehtävän menemällä ansible hakemistoon, ja siellä käytin komentoa `git init`. Git init komento luo tyhjä git-arkiston. (git-init s.a)
+
+<img width="813" height="227" alt="kuva" src="https://github.com/user-attachments/assets/8ed0e60e-bb8c-4351-9683-050e4c7dbb1e" />
+
+Seuraavaksi käytin komentoa `git add .`, joka siirtää nämä hakemistot ja tiedostot staging-aluelle (git-add s.a) `git statuksella` huomaamme, että tiedostot on siirretty nyt staging -tilaan.
+
+<img width="691" height="413" alt="kuva" src="https://github.com/user-attachments/assets/47de7c8e-8aee-4278-86d3-cf6fc63a73ce" />
+
+seuraavaksi ajoin `git commit`, ja lisäsin selityksen, mitä tässä oikein tapahtuu.
+
+<img width="924" height="534" alt="kuva" src="https://github.com/user-attachments/assets/fb434375-42c2-41e3-b80f-2a574371cee7" />
+
+Tämän jälkeen lähdin muuttamaan Mariadb:n asetuksia, jossa alkuperäinen wait_timeout oli 200 sekuntia, muutin sen 300 sekuntiin.
+
+<img width="945" height="260" alt="kuva" src="https://github.com/user-attachments/assets/fc507b88-9fef-48bc-868b-eb69ba55dae9" />
+
+Seuraavaksi lähdin tallentaan muutokset staging-alueelle, komennolla `git add .`, ja `git commit` komennolla, tallensin muutokset varastooni, ja kerroin mistä oli kyse.
+
+<img width="943" height="408" alt="kuva" src="https://github.com/user-attachments/assets/a7c7252a-0460-4dc1-9ab7-fd52bb7ca6da" />
+
+Lopuksi ajoin `ansible-playbook site.yml -K`, jotta nähdään, onko muutoksia tullut Mariadb:hen, ja muutoksia on tullut!
+
+<img width="944" height="198" alt="kuva" src="https://github.com/user-attachments/assets/b9eee2f8-7d12-40c8-959f-422be3e9c5fa" />
+
+
+
+
+
+
+
+
 
 
 
