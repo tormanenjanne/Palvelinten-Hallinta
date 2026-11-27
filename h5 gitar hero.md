@@ -65,6 +65,9 @@ Huomasin vielä, että git status komennolla nähdää se, onko jotain tiedostoj
 
 Lopuksi käytin komentoa `git reset --hard`, ja jos olen oikein ymmärtänyt, tämä pitäisi poistaa testing.md tiedoston kirjaimet, jotka olen lisännyt sinne.
 
+<img width="628" height="34" alt="kuva" src="https://github.com/user-attachments/assets/bd71a64e-20cb-4abc-94ca-41a46f3b8fc9" />
+
+
 
 Ja näin siinä myös kävikin.
 
