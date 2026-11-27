@@ -52,6 +52,7 @@ Kävin vielä kurkistamassa, että tiedosto oli varmasti tullut Githubiin, ja si
 Tämän tehtävän komennot tulivat ulkomuistista. Tuli tehtyä edellisellä oppitunnilla useamman kerran tämä sama homma, joten komennot oli hyvin muistissa.
 
 ## c) Doh! Tee tyhmä muutos gittiin, älä tee commit:tia. Tuhoa huonot muutokset ‘git reset --hard’. Huomaa, että tässä toiminnossa ei ole peruutusnappia
+a
 
 
 
