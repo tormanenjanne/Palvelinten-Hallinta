@@ -52,7 +52,47 @@ Kävin vielä kurkistamassa, että tiedosto oli varmasti tullut Githubiin, ja si
 Tämän tehtävän komennot tulivat ulkomuistista. Tuli tehtyä edellisellä oppitunnilla useamman kerran tämä sama homma, joten komennot oli hyvin muistissa.
 
 ## c) Doh! Tee tyhmä muutos gittiin, älä tee commit:tia. Tuhoa huonot muutokset ‘git reset --hard’. Huomaa, että tässä toiminnossa ei ole peruutusnappia
-a
+
+Aloitin tehtävän avaamalla uudelleen Microssa testing.md tiedoston, ja lisäsin tänne kirjaimia.
+
+<img width="932" height="333" alt="kuva" src="https://github.com/user-attachments/assets/ca465d6b-1bf8-4bcb-a8b0-c050a775d1eb" />
+
+Lopuksi perehdyin hieman `git reset --hard` komentoon. Komento siis palauttaa edelliseen versioon kaikista tiedostoista, jotka ollaan viimeksi commitettu. (git s.a)
+
+Huomasin vielä, että git status komennolla nähdää se, onko jotain tiedostoja muokattu tai lisätty ylipätään onko jotain muutoksia tehty.
+
+<img width="765" height="184" alt="kuva" src="https://github.com/user-attachments/assets/cd9d0be1-5377-4fd6-b617-9c71b4dde490" />
+
+Lopuksi käytin komentoa `git reset --hard`, ja jos olen oikein ymmärtänyt, tämä pitäisi poistaa testing.md tiedoston kirjaimet, jotka olen lisännyt sinne.
+
+
+Ja näin siinä myös kävikin.
+
+<img width="934" height="239" alt="kuva" src="https://github.com/user-attachments/assets/ae06cd84-5dee-4dc7-a1b6-458f97dcab90" />
+
+## d) Tukki. Tarkastele ja selitä varastosi lokia. Näytä myös, mitä muutoksia tiedostoihin on tehty. Tarkista, että nimesi ja sähköpostiosoitteesi näkyy haluamallasi tavalla ja korjaa tarvittaessa.
+
+Komennolla `git log --patch` nähdään lokitietoja, ja mitä muutoksia on tehty tiedostoihin.
+
+Oman nimeni ja sähköpostini olen lisännyt jo tunnilla, ja tämä tuli siinä vaiheessa, kun halusin tehdä ensimmäisen commitin. Tässä käytin näitä komentoja tietojen lisäämiseen:
+
+```markdown
+git config --global user.email "bhp934@myy.haaga-helia.fi"
+git config --global user.name "Janne Tormanen"
+```
+
+Näillä komennoilla sain lisättyä sähköpostini sekä nimeni.
+
+Kellonajat kertovat siitä, mitä muutoksia on tehty milloinkin. Huomaamme, että alempi committi näistä on se, kun loin uuden varaston lisäsin sinne lisenssin **GNU General Public License v3.0**. Ylhäällä oleva committi kertoo siitä, kun olin tein tehtävässä a) uuden tiedoston. Commitin ylhäällä on tiiviste, joka laskettu commitin aikana. sähköposti sekä nimeni ovat kunnossa, joten niihin ei tarvitse tehdä muutoksia.
+
+
+<img width="904" height="714" alt="kuva" src="https://github.com/user-attachments/assets/9bd8f3ef-efab-4d96-a18b-7d43623cff8e" />
+
+
+
+
+
+
 
 
 
@@ -70,5 +110,6 @@ a
 ## Lähteet
 
 - Chacon, S. & Straub, B. 2014. Pro git. 2. uudistettu painos. What is Git?, 1.3 alaluku. Luettavissa: https://git-scm.com/book/en/v2. Luettu: 26.11.2026.
+- Git s.a. Git-reset. Luettavissa: https://git-scm.com/docs/git-reset. Luettu: 27.11.2026.
 - Gitlab Docs s.a. Stage, commit, and push changes. Luettavissa: https://docs.gitlab.com/topics/git/commit/. Luettu: 26.11.2026.
 - Gitlab Docs s.a. Common Git commands. Luettavissa: https://docs.gitlab.com/topics/git/commands/. Luettu: 26.11.2026.
